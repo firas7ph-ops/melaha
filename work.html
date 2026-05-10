@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أعمالنا — ملاحة</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { background: var(--bg); }
+
+  .work-hero {
+    padding: 200px 48px 90px;
+    max-width: 1500px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--line);
+  }
+  .work-hero-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 80px;
+    align-items: end;
+  }
+  .work-hero h1 {
+    font-family: "Wathiq", sans-serif;
+    font-weight: 400;
+    font-size: clamp(64px, 9vw, 160px);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .work-hero h1 em {
+    font-style: italic;
+    color: var(--amber);
+    font-weight: 400;
+  }
+  .work-hero-side p {
+    font-size: 19px;
+    line-height: 1.75;
+    color: var(--ink);
+    opacity: 0.75;
+    max-width: 42ch;
+    margin-bottom: 24px;
+  }
+  .work-hero-side .count {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    color: var(--amber);
+    text-transform: uppercase;
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 360px;
+  }
+
+  .filter-bar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(17, 10, 5, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
+    padding: 22px 48px;
+  }
+  .filter-inner {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+  .filter-pills {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .filter-pill {
+    padding: 11px 20px;
+    border-radius: 999px;
+    border: 1px solid var(--line-strong);
+    background: transparent;
+    color: var(--ink);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    white-space: nowrap;
+  }
+  .filter-pill:hover {
+    border-color: var(--ink);
+  }
+  .filter-pill.active {
+    background: var(--ink);
+    color: var(--bg);
+    border-color: var(--ink);
+  }
+  .filter-result {
+    font-size: 12px;
+    color: var(--ink);
+    opacity: 0.65;
+    letter-spacing: 0.16em;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+  .filter-result span { color: var(--amber); }
+
+  .projects-section {
+    padding: 64px 48px 100px;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+  }
+  .project {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-deep);
+    cursor: pointer;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .project .bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 1.4s ease;
+    filter: saturate(0.85) contrast(1.05);
+  }
+  .project:hover .bg { transform: scale(1.06); }
+  .project .scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10,6,4,0) 35%, rgba(10,6,4,0.92) 100%);
+  }
+  .project .arrow-ic {
+    position: absolute;
+    top: 24px; left: 24px;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: rgba(232, 213, 183, 0.08);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--line-strong);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink);
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.4s ease, transform 0.4s ease, background 0.3s ease;
+    z-index: 3;
+  }
+  .project:hover .arrow-ic {
+    opacity: 1; transform: translateY(0);
+    background: var(--amber); color: var(--bg-deep); border-color: var(--amber);
+  }
+  .project .meta {
+    position: absolute;
+    bottom: 24px; right: 24px; left: 24px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  .project .client {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink);
+    opacity: 0.7;
+    margin-bottom: 8px;
+  }
+  .project .title {
+    font-family: "Wathiq", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+  .project .tag {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--line-strong);
+    background: rgba(10, 6, 4, 0.5);
+    backdrop-filter: blur(8px);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    color: var(--ink);
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+
+  .project.size-l { grid-column: span 7; aspect-ratio: 4 / 3; }
+  .project.size-m { grid-column: span 5; aspect-ratio: 1 / 1; }
+  .project.size-tall { grid-column: span 5; aspect-ratio: 3 / 4; }
+  .project.size-wide { grid-column: span 7; aspect-ratio: 16 / 10; }
+  .project.size-square { grid-column: span 4; aspect-ratio: 1 / 1; }
+  .project.size-w8 { grid-column: span 8; aspect-ratio: 16 / 9; }
+  .project.size-w4 { grid-column: span 4; aspect-ratio: 3 / 4; }
+  .project.size-w6 { grid-column: span 6; aspect-ratio: 4 / 3; }
+  .project.size-w12 { grid-column: span 12; aspect-ratio: 24 / 9; }
+  .project.size-w12 .title { font-size: 40px; }
+  .project.size-w7 { grid-column: span 7; aspect-ratio: 16 / 10; }
+  .project.size-w5 { grid-column: span 5; aspect-ratio: 4 / 3; }
+
+  .load-more { margin-top: 64px; text-align: center; }
+
+  @media (max-width: 1100px) {
+    .work-hero { padding: 130px 24px 56px; }
+    .work-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    .filter-bar { padding: 16px 24px; }
+    .filter-inner { flex-direction: column; align-items: stretch; gap: 14px; }
+    .filter-pills { overflow-x: auto; padding-bottom: 4px; }
+    .projects-section { padding: 40px 24px 64px; }
+    .projects-grid { gap: 16px; }
+    .project[class*="size-"] { grid-column: span 12 !important; aspect-ratio: 4/5 !important; }
+    .project.size-w12 .title { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- NAV -->
+<nav class="nav scrolled" id="nav">
+  <a href="index.html" class="nav-logo"><img src="images/melaha-logo.svg" alt="ملاحة" style="height: 25px; width: 90px;"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="index.html#services">خدماتنا</a></li>
+    <li><a href="index.html#process">آلية عملنا</a></li>
+    <li><a href="work.html" class="active">أعمالنا</a></li>
+    <li><a href="index.html#about">من نحن</a></li>
+  </ul>
+  <a href="https://wa.link/fzgjlv" target="_blank" rel="noopener" class="btn-pill">
+    <span>أبحر معنا</span>
+    <span class="arrow">←</span>
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="work-hero">
+  <div class="work-hero-grid">
+    <div>
+      <span class="section-eyebrow" style="gap: 0px; letter-spacing: 0px;">المعرض ٢٠٢٤ — ٢٠٢٦</span>
+      <h1>أعمالنا في ملاحة</h1>
+    </div>
+    <div class="work-hero-side">
+      <p>حملات وهويات وأفكار صنعناها مع شركاء يؤمنون بقوة الرسالة، ويعرفون أن كل فكرة تستحق أن تُروى بإتقان.</p>
+      <div class="count">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+  <div class="filter-inner">
+    <div class="filter-pills" id="filters">
+      <button class="filter-pill active" data-cat="all">الكل</button>
+      <button class="filter-pill" data-cat="ads">حملات إعلانية</button>
+      <button class="filter-pill" data-cat="video">إنتاج فيديو</button>
+    </div>
+    <div class="filter-result"></div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<section class="projects-section">
+  <div class="projects-grid" id="grid">
+    <a href="jazan.html" class="project size-w7" data-cat="ads">
+      <div class="bg" style="background-image: url('https://img.youtube.com/vi/9wax5oZwc28/maxresdefault.jpg');"></div>
+      <div class="scrim"></div><div class="arrow-ic">↗</div>
+      <div class="meta"><div><div class="client">مصنف · ٢٠٢٥</div><div class="title">نروي جازان في مائدة</div></div><span class="tag">حملة إعلانية</span></div>
+    </a>
+    <a href="masnaf-eid.html" class="project size-w5" data-cat="video">
+      <div class="bg" style="background-image: url('https://img.youtube.com/vi/q7gqmu6uD5k/maxresdefault.jpg');"></div>
+      <div class="scrim"></div><div class="arrow-ic">↗</div>
+      <div class="meta"><div><div class="client">مصنف · ٢٠٢٥</div><div class="title">فطور العيد في جازان</div></div><span class="tag">إنتاج فيديو</span></div>
+    </a>
+    <a href="masnaf-fish.html" class="project size-w6" data-cat="video">
+      <div class="bg" style="background-image: url('https://img.youtube.com/vi/Xj-yP8CU0Cs/maxresdefault.jpg');"></div>
+      <div class="scrim"></div><div class="arrow-ic">↗</div>
+      <div class="meta"><div><div class="client">مصنف · ٢٠٢٥</div><div class="title">ليش نفطر سمك؟</div></div><span class="tag">إنتاج فيديو</span></div>
+    </a>
+    <a href="harafiyeen.html" class="project size-w6" data-cat="video">
+      <div class="bg" style="background-image: url('https://img.youtube.com/vi/0jwEdZ6QNfE/maxresdefault.jpg');"></div>
+      <div class="scrim"></div><div class="arrow-ic">↗</div>
+      <div class="meta"><div><div class="client">بيت الحرفيين · ٢٠٢٥</div><div class="title">أصل الحرفة</div></div><span class="tag">إنتاج فيديو</span></div>
+    </a>
+    <a href="roban.html" class="project size-w7" data-cat="ads">
+      <div class="bg" style="background-image: url('images/roban-cover.png');"></div>
+      <div class="scrim"></div><div class="arrow-ic">↗</div>
+      <div class="meta"><div><div class="client">الربّان · ٢٠٢٥</div><div class="title">الربّان يفهمك</div></div><span class="tag">حملة إعلانية</span></div>
+    </a>
+    <a href="fournya.html" class="project size-w5" data-cat="ads">
+      <div class="bg" style="background-image: url('images/fournya-3.png'); background-size: cover; background-color: #f6f4ef;"></div>
+      <div class="scrim"></div><div class="arrow-ic">↗</div>
+      <div class="meta"><div><div class="client">فرنية · ٢٠٢٥</div><div class="title">بفطورك تزين أمورك</div></div><span class="tag">حملة إعلانية</span></div>
+    </a>
+    <a href="ochikn.html" class="project size-w5" data-cat="ads">
+      <div class="bg" style="background-image: url('images/ochikn-cover.png'); background-size: contain; background-repeat: no-repeat; background-color: #56b8e0;"></div>
+      <div class="scrim"></div><div class="arrow-ic">↗</div>
+      <div class="meta"><div><div class="client">أوشكن · ٢٠٢٤</div><div class="title">أوشكن يوصّل للجامعة</div></div><span class="tag">حملة إعلانية</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-col">
+      <h5>استكشف</h5>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="index.html#services">خدماتنا</a></li>
+        <li><a href="index.html#process">آلية عملنا</a></li>
+        <li><a href="work.html">أعمالنا</a></li>
+        <li><a href="index.html#about">من نحن</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>تواصل</h5>
+      <ul>
+        <li><a href="mailto:info@melaha.co">info@melaha.co</a></li>
+        <li><a href="tel:+966500000000">1710 881 53 966+</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 — وكالة ملاحة. جميع الحقوق محفوظة.</div>
+    <div class="footer-socials">
+      <a href="https://x.com/melaha_sa" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M18.244 2H21.5l-7.5 8.57L23 22h-7.05l-5.52-7.21L4.2 22H1l8.04-9.18L1 2h7.2l4.99 6.6L18.244 2zm-2.47 18h1.97L7.31 4H5.2l10.574 16z"/></svg></a>
+      <a href="https://www.instagram.com/melaha.sa/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+      <a href="https://www.tiktok.com/@melaha.sa" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M19.6 6.6a5.4 5.4 0 0 1-3.3-1.1V15a5.5 5.5 0 1 1-5.5-5.5c.3 0 .6 0 .9.1v2.7a2.8 2.8 0 1 0 1.9 2.7V2h2.6a5.4 5.4 0 0 0 3.4 4.6v.1z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const dot = document.querySelector('.cursor-dot');
+  const ring = document.querySelector('.cursor-ring');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  window.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px';
+    dot.style.top = my + 'px';
+  });
+  function loop(){
+    rx += (mx - rx) * 0.18;
+    ry += (my - ry) * 0.18;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(loop);
+  }
+  loop();
+  document.querySelectorAll('a, button, .project, .filter-pill').forEach(el => {
+    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+  });
+})();
+
+(function(){
+  const pills = document.querySelectorAll('.filter-pill');
+  const projects = document.querySelectorAll('.project');
+  const visEl = document.getElementById('visibleCount');
+  const arNum = (n) => n.toString().replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+  pills.forEach(p => {
+    p.addEventListener('click', () => {
+      pills.forEach(x => x.classList.remove('active'));
+      p.classList.add('active');
+      const cat = p.dataset.cat;
+      let visible = 0;
+      projects.forEach(pr => pr.style.opacity = 0);
+      setTimeout(() => {
+        projects.forEach(pr => {
+          const match = cat === 'all' || pr.dataset.cat === cat;
+          if (match) { pr.style.display = ''; visible++; }
+          else { pr.style.display = 'none'; }
+        });
+        visEl.textContent = arNum(visible);
+        requestAnimationFrame(() => {
+          projects.forEach((pr, i) => {
+            if (pr.style.display !== 'none') {
+              setTimeout(() => { pr.style.opacity = 1; }, i * 30);
+            }
+          });
+        });
+      }, 260);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

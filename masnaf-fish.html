@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ليش نفطر سمك؟ — مصنف · ملاحة</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { background: var(--bg); }
+
+  /* Case header — minimal cinematic strip */
+  .case-bar {
+    position: sticky;
+    top: 0;
+    z-index: 60;
+    background: rgba(2, 6, 15, 0.9);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--line);
+    padding: 22px 48px;
+  }
+  .case-bar-inner {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 24px;
+    font-size: 15px;
+    color: var(--ink);
+  }
+  .case-back, .case-info {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--ink);
+    opacity: 0.85;
+    transition: opacity 0.2s ease, color 0.2s ease;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+  }
+  .case-back { justify-self: start; }
+  .case-info {
+    justify-self: end;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+  }
+  .case-back:hover, .case-info:hover { color: var(--amber); opacity: 1; }
+  .case-back .arrow { transition: transform 0.25s ease; }
+  .case-back:hover .arrow { transform: translateX(6px); }
+  .case-title {
+    text-align: center;
+    font-family: "Wathiq", sans-serif;
+    font-size: 18px;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+  .case-title .sep { opacity: 0.45; margin: 0 10px; }
+  .case-info .plus {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    border: 1px solid var(--line-strong);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
+    font-size: 14px;
+    line-height: 1;
+  }
+  .case-info:hover .plus { border-color: var(--amber); background: var(--amber); color: var(--bg-deep); }
+
+  /* HERO video */
+  .case-hero {
+    padding: 56px 48px 32px;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+  .case-hero-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 36px;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .case-hero-meta h1 {
+    font-family: "Wathiq", sans-serif;
+    font-weight: 400;
+    font-size: clamp(40px, 5.6vw, 92px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    text-wrap: balance;
+    max-width: 18ch;
+  }
+  .case-hero-meta h1 .accent { color: var(--amber); }
+  .case-hero-meta .side {
+    text-align: left;
+    color: var(--ink);
+    opacity: 0.7;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    line-height: 1.9;
+  }
+  .case-hero-meta .side strong {
+    display: block;
+    color: var(--amber);
+    margin-bottom: 6px;
+    font-weight: 400;
+  }
+
+  .video-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 1px solid var(--line);
+    overflow: hidden;
+    background: var(--bg-deep);
+  }
+  .video-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+    border: 0;
+  }
+
+  .case-foot {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--ink);
+    opacity: 0.55;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .case-foot .dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--amber);
+    margin-left: 8px;
+    box-shadow: 0 0 12px var(--amber);
+  }
+
+  /* Bottom CTA — show details */
+  .case-cta {
+    padding: 90px 48px 140px;
+    max-width: 1500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .case-cta p {
+    font-family: "Wathiq", sans-serif;
+    font-size: clamp(28px, 3vw, 44px);
+    line-height: 1.3;
+    color: var(--ink);
+    max-width: 24ch;
+    margin: 0 auto 36px;
+    text-wrap: balance;
+  }
+  .case-cta p .accent { color: var(--amber); }
+
+  /* DETAILS PANEL — drawer from the right */
+  .details-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 3, 10, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+  .details-panel {
+    position: fixed;
+    top: 0; left: 0;
+    height: 100%;
+    width: min(640px, 92vw);
+    background: var(--bg-deep);
+    border-right: 1px solid var(--line);
+    z-index: 201;
+    transform: translateX(-100%);
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    overflow-y: auto;
+    box-shadow: 4px 0 80px rgba(0, 0, 0, 0.6);
+  }
+  body.details-open .details-overlay { opacity: 1; pointer-events: auto; }
+  body.details-open .details-panel { transform: translateX(0); }
+  body.details-open { overflow: hidden; }
+
+  .details-panel-inner {
+    padding: 100px 56px 80px;
+  }
+  .details-close {
+    position: absolute;
+    top: 24px; left: 24px;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--line-strong);
+    background: rgba(255,255,255,0.04);
+    color: var(--ink);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  }
+  .details-close:hover {
+    border-color: var(--amber);
+    background: var(--amber);
+    color: var(--bg-deep);
+    transform: rotate(90deg);
+  }
+  .details-eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    color: var(--amber);
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .details-eyebrow::before {
+    content: "";
+    width: 28px; height: 1px;
+    background: var(--amber);
+  }
+  .details-title {
+    font-family: "Wathiq", sans-serif;
+    font-weight: 400;
+    font-size: clamp(36px, 4.4vw, 56px);
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .details-title .accent { color: var(--amber); }
+  .details-tagline {
+    font-size: 17px;
+    line-height: 1.85;
+    color: var(--ink);
+    opacity: 0.78;
+    margin-bottom: 56px;
+    max-width: 48ch;
+  }
+  .details-block {
+    border-top: 1px solid var(--line);
+    padding-top: 36px;
+    margin-bottom: 40px;
+  }
+  .details-block h3 {
+    font-family: "Wathiq", sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.25;
+    color: var(--ink);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+  }
+  .details-block h3 .num {
+    font-size: 12px;
+    color: var(--amber);
+    letter-spacing: 0.16em;
+    opacity: 0.8;
+  }
+  .details-block p {
+    font-size: 16px;
+    line-height: 1.95;
+    color: var(--ink);
+    opacity: 0.78;
+    margin-bottom: 14px;
+    max-width: 52ch;
+  }
+  .details-list {
+    list-style: none;
+    display: grid;
+    gap: 12px;
+    margin-top: 18px;
+  }
+  .details-list li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink);
+    opacity: 0.85;
+    padding: 14px 18px;
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,0.02);
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+  }
+  .details-list li::before {
+    content: "✦";
+    color: var(--amber);
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  .details-cta {
+    margin-top: 56px;
+    padding-top: 36px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .details-cta-text {
+    font-family: "Wathiq", sans-serif;
+    font-size: 20px;
+    color: var(--ink);
+    max-width: 22ch;
+  }
+
+  @media (max-width: 1100px) {
+    .case-bar { padding: 16px 24px; }
+    .case-bar-inner { grid-template-columns: auto 1fr; }
+    .case-title { display: none; }
+    .case-info { justify-self: end; }
+    .case-hero { padding: 32px 24px 24px; }
+    .case-cta { padding: 64px 24px 96px; }
+    .details-panel-inner { padding: 88px 28px 64px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- TOP STRIP -->
+<div class="case-bar">
+  <div class="case-bar-inner">
+    <a href="work.html" class="case-back">
+      <span class="arrow">→</span>
+      <span>أعمالنا</span>
+    </a>
+    <div class="case-title">
+      <span>ليش نفطر سمك؟</span>
+      <span class="sep">—</span>
+      <span>مصنف</span>
+    </div>
+    <button class="case-info" id="openDetails">
+      <span>تفاصيل</span>
+      <span class="plus">+</span>
+    </button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="case-hero">
+  <div class="case-hero-meta">
+    <h1>ليش <span class="accent">نفطر سمك؟</span></h1>
+    <div class="side">
+      <strong>العميل</strong>
+      مصنف · مطعم<br>
+      <strong>السنة</strong>
+      ٢٠٢٥<br>
+      <strong>الخدمة</strong>
+      فكرة + كتابة + إنتاج فيديو<br>(ضمن حملة "الخير في أصله")
+    </div>
+  </div>
+
+  <div class="video-frame">
+    <iframe
+      src="https://www.youtube.com/embed/Xj-yP8CU0Cs?rel=0&modestbranding=1"
+      title="ليش نفطر سمك؟"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+
+  <div class="case-foot">
+    <div><span class="dot"></span>فيديو ضمن حملة "الخير في أصله" — الرياض</div>
+    <div>MASNAF × MELAHA — RIYADH</div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="case-cta">
+  <p>وراء هذا الفيلم قصة عادة جميلة في جازان… <span class="accent">شف التفاصيل.</span></p>
+  <button class="case-info" id="openDetailsBottom" style="font-size: 17px;">
+    <span>افتح ملف الحملة</span>
+    <span class="plus">+</span>
+  </button>
+</section>
+
+<!-- DETAILS DRAWER -->
+<div class="details-overlay" id="overlay"></div>
+<aside class="details-panel" id="panel" aria-hidden="true">
+  <button class="details-close" id="closeDetails" aria-label="إغلاق">×</button>
+  <div class="details-panel-inner">
+    <span class="details-eyebrow">ملف المشروع</span>
+    <h2 class="details-title">ليش <span class="accent">نفطر سمك؟</span></h2>
+    <p class="details-tagline">
+      فيديو لمطعم مصنف، ضمن حملة "الخير في أصله" في الرياض. يجاوب على سؤال يخطر في بال كل واحد من أهل الرياض يسمع عن فطور جازان.
+    </p>
+
+    <div class="details-block">
+      <h3><span class="num">٠١</span><span>السؤال</span></h3>
+      <p>"ليش نفطر سمك؟" — سؤال طبيعي يدور في بال أي شخص بره جازان لمّا يسمع عن عادة فطور أهلها.</p>
+      <p>اخترنا نواجه السؤال مباشرة، ونبني عليه الفيلم كله، بدل ما نتجاهله.</p>
+    </div>
+
+    <div class="details-block">
+      <h3><span class="num">٠٢</span><span>الربط بفكرة الحملة</span></h3>
+      <p>ربطنا الإجابة بفكرة "الخير في أصله": إن الخير، اللي هو الأكل، موجود في أصلنا الشعبي. فطور السمك مو غريب، هو امتداد لإرث.</p>
+    </div>
+
+    <div class="details-block">
+      <h3><span class="num">٠٣</span><span>التنفيذ</span></h3>
+      <p>ملاحة مسكت الفيديو كاملاً: الفكرة، الكتابة، والإنتاج.</p>
+      <ul class="details-list">
+        <li>الخدمة: فكرة + سيناريو + إنتاج</li>
+        <li>الحملة: "الخير في أصله" — الرياض</li>
+        <li>الأسلوب: توثيقي · سردي</li>
+      </ul>
+    </div>
+
+    <div class="details-cta">
+      <div class="details-cta-text">جاهز نسوي لك حملة بنفس العمق؟</div>
+      <a href="https://wa.link/fzgjlv" target="_blank" rel="noopener" class="btn-pill">
+        <span>أبحر معنا</span>
+        <span class="arrow">←</span>
+      </a>
+    </div>
+  </div>
+</aside>
+
+<script>
+// Cursor
+(function(){
+  const dot = document.querySelector('.cursor-dot');
+  const ring = document.querySelector('.cursor-ring');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  window.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px'; dot.style.top = my + 'px';
+  });
+  function loop(){
+    rx += (mx - rx) * 0.18; ry += (my - ry) * 0.18;
+    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+    requestAnimationFrame(loop);
+  }
+  loop();
+})();
+
+// Drawer
+const body = document.body;
+const overlay = document.getElementById('overlay');
+const panel = document.getElementById('panel');
+function openDetails(){ body.classList.add('details-open'); panel.setAttribute('aria-hidden','false'); }
+function closeDetails(){ body.classList.remove('details-open'); panel.setAttribute('aria-hidden','true'); }
+document.getElementById('openDetails').addEventListener('click', openDetails);
+document.getElementById('openDetailsBottom').addEventListener('click', openDetails);
+document.getElementById('closeDetails').addEventListener('click', closeDetails);
+overlay.addEventListener('click', closeDetails);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetails(); });
+</script>
+
+</body>
+</html>
