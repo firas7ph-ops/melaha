@@ -1,4 +1,10 @@
 /* ============ Melaha — ملاحة ============ */
+*, *::before, *::after {
+  letter-spacing: 0 !important;
+  word-spacing: normal !important;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
 
 @font-face {
   font-family: "Wathiq";
