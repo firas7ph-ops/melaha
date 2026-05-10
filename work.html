@@ -378,30 +378,38 @@
   const projects = document.querySelectorAll('.project');
   const visEl = document.getElementById('visibleCount');
   const arNum = (n) => n.toString().replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+
+  // Make sure projects are visible by default and have a transition
+  projects.forEach(pr => {
+    pr.style.transition = 'opacity 0.35s ease';
+    pr.style.opacity = '1';
+  });
+
+  function applyFilter(cat){
+    let visible = 0;
+    projects.forEach(pr => {
+      const match = cat === 'all' || pr.dataset.cat === cat;
+      if (match){
+        pr.style.display = '';
+        pr.style.opacity = '1';
+        visible++;
+      } else {
+        pr.style.display = 'none';
+      }
+    });
+    if (visEl) visEl.textContent = arNum(visible);
+  }
+
   pills.forEach(p => {
     p.addEventListener('click', () => {
       pills.forEach(x => x.classList.remove('active'));
       p.classList.add('active');
-      const cat = p.dataset.cat;
-      let visible = 0;
-      projects.forEach(pr => pr.style.opacity = 0);
-      setTimeout(() => {
-        projects.forEach(pr => {
-          const match = cat === 'all' || pr.dataset.cat === cat;
-          if (match) { pr.style.display = ''; visible++; }
-          else { pr.style.display = 'none'; }
-        });
-        visEl.textContent = arNum(visible);
-        requestAnimationFrame(() => {
-          projects.forEach((pr, i) => {
-            if (pr.style.display !== 'none') {
-              setTimeout(() => { pr.style.opacity = 1; }, i * 30);
-            }
-          });
-        });
-      }, 260);
+      applyFilter(p.dataset.cat);
     });
   });
+
+  // Initial state
+  applyFilter('all');
 })();
 </script>
 
