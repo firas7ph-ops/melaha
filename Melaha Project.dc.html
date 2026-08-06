@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>مشروع — ملاحة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+@font-face{font-family:'Wathiq Thuluth';src:url('assets/fonts/WathiqThuluth-Regular.otf') format('opentype');font-weight:400;font-display:swap}
+@font-face{font-family:'Wathiq Thuluth';src:url('assets/fonts/WathiqThuluth-Bold.otf') format('opentype');font-weight:700;font-display:swap}
+@font-face{font-family:'Wathiq Thuluth';src:url('assets/fonts/WathiqThuluth-Black.otf') format('opentype');font-weight:900;font-display:swap}
+:root{--head:'Wathiq Thuluth','IBM Plex Sans Arabic',system-ui,sans-serif;--body:'IBM Plex Sans Arabic',system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#0A1520;color:#F2EDE4;font-family:var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{margin:0;font-family:var(--head);font-feature-settings:normal;font-variant-alternates:normal}
+h1{font-feature-settings:"salt" 1}
+a{color:inherit;text-decoration:none}
+a:hover{color:#93B8CE}
+::selection{background:#93B8CE;color:#0A1520}
+</style>
+</helmet>
+
+<div dir="rtl" style="background:#0A1520;position:relative;overflow:clip">
+
+  <div data-progress="" style="position:fixed;top:0;right:0;height:2px;width:0%;background:#93B8CE;z-index:120"></div>
+  
+  <header data-nav="" style="position:fixed;top:0;right:0;left:0;z-index:110;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px clamp(20px,4vw,56px);transition:transform .6s cubic-bezier(.16,1,.3,1),background .5s,padding .5s">
+    <a href="Melaha Work.dc.html" data-magnet="" style="display:inline-flex;align-items:center;gap:10px;padding:10px 20px;border-radius:100px;border:1px solid rgba(242,237,228,.22);font-size:14px;transition:background .4s" style-hover="background:rgba(242,237,228,.1)"><span>→</span> أعمالنا</a>
+    <a href="Melaha Site.dc.html" style="display:flex;align-items:center">
+      <img src="https://melaha.co/images/melaha-logo.svg" alt="ملاحة" style="height:24px;filter:brightness(0) invert(1)" />
+    </a>
+    <a href="Melaha Contact.dc.html" data-magnet="" style="display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border:1px solid rgba(242,237,228,.25);border-radius:100px;font-size:14px;font-weight:500;transition:background .4s,color .4s,border-color .4s" style-hover="background:#F2EDE4;color:#0A1520;border-color:#F2EDE4">ابدأ مشروعك <span>←</span></a>
+  </header>
+
+  <section data-screen-label="Project hero" style="position:relative;padding:clamp(130px,16vw,210px) clamp(20px,4vw,56px) clamp(40px,5vw,64px);overflow:hidden">
+    <div style="position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:clamp(18px,2.6vw,28px)">
+      <div data-reveal="" style="display:flex;align-items:center;gap:12px;font-size:12px;color:#93B8CE">
+        <span style="width:7px;height:7px;border-radius:50%;background:#93B8CE;display:inline-block"></span>
+        <span data-eyebrow="">مشروع</span>
+      </div>
+      <h1 data-title="" style="font-size:clamp(38px,7vw,116px);font-weight:900;line-height:1.06;max-width:18ch">مشروع ملاحة</h1>
+      <p data-intro="" data-reveal="" style="max-width:58ch;font-size:clamp(15px,1.3vw,20px);line-height:1.8;color:rgba(242,237,228,.74);margin:0"></p>
+      <div data-metarow="" data-reveal="" style="display:flex;flex-wrap:wrap;gap:clamp(28px,4vw,72px);width:100%;margin-top:clamp(10px,1.6vw,20px);padding-top:clamp(20px,2.6vw,30px);border-top:1px solid rgba(242,237,228,.14)"></div>
+    </div>
+  </section>
+
+  <section data-screen-label="Media" style="padding:0 clamp(20px,4vw,56px) clamp(20px,3vw,40px)">
+    <div data-media="" data-reveal="" style="display:flex;flex-direction:column;gap:clamp(14px,1.8vw,22px)"></div>
+    <div data-caption="" style="margin-top:16px;font-size:13px;color:rgba(242,237,228,.5)"></div>
+  </section>
+
+  <section data-screen-label="KPIs" style="padding:clamp(40px,6vw,80px) clamp(20px,4vw,56px) 0">
+    <div data-kpis="" style="display:grid;gap:clamp(12px,1.6vw,20px)"></div>
+  </section>
+
+  <section data-screen-label="Case study" style="padding:clamp(60px,9vw,130px) clamp(20px,4vw,56px)">
+    <div data-reveal="" style="font-size:12px;color:#93B8CE;margin-bottom:clamp(26px,3.4vw,44px)">ملف الحملة</div>
+    <div data-blocks="" style="display:flex;flex-direction:column"></div>
+  </section>
+
+  <section data-screen-label="CTA" style="position:relative;padding:clamp(80px,12vw,170px) clamp(20px,4vw,56px);overflow:hidden;border-top:1px solid rgba(242,237,228,.12)">
+    <div style="position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:clamp(18px,2.6vw,28px)">
+      <div data-reveal="" style="font-size:12px;color:#93B8CE">جاهز للإبحار؟</div>
+      <h2 data-cta="" style="font-size:clamp(28px,5.4vw,92px);font-weight:900;line-height:1.08;max-width:18ch">جاهز نسوي لك شغل بنفس العمق؟</h2>
+      <div data-reveal="" style="display:flex;flex-wrap:wrap;gap:12px">
+        <a href="Melaha Contact.dc.html" data-magnet="" style="display:inline-flex;align-items:center;gap:12px;padding:18px 36px;border-radius:100px;background:#F2EDE4;color:#0A1520;font-weight:600;font-size:16px;transition:transform .4s cubic-bezier(.16,1,.3,1),background .4s" style-hover="background:#93B8CE;transform:translateY(-3px)">ابدأ مشروعك <span>←</span></a>
+        <a href="Melaha Work.dc.html" data-magnet="" style="display:inline-flex;align-items:center;gap:10px;padding:18px 34px;border-radius:100px;border:1px solid rgba(242,237,228,.28);font-size:16px;transition:background .4s" style-hover="background:rgba(242,237,228,.1)">مشاريع أخرى</a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Next" style="padding:0 clamp(20px,4vw,56px) clamp(70px,9vw,120px)">
+    <div data-reveal="" style="font-size:12px;color:rgba(242,237,228,.45);margin-bottom:clamp(20px,2.6vw,32px)">المشروع التالي</div>
+    <div data-next="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(14px,1.8vw,22px)"></div>
+  </section>
+
+  <footer data-screen-label="Footer" style="padding:clamp(44px,5vw,66px) clamp(20px,4vw,56px) 30px;border-top:1px solid rgba(242,237,228,.12);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;font-size:13px;color:rgba(242,237,228,.45)">
+    <span>© 2026 — وكالة ملاحة. جميع الحقوق محفوظة.</span>
+    <div style="display:flex;gap:20px">
+      <a href="mailto:info@melaha.co">info@melaha.co</a>
+      <a href="https://www.instagram.com/melaha.sa/" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1px solid rgba(242,237,228,.22);color:inherit"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2.2c-2.7 0-3 0-4 .06-1.1.05-1.8.2-2.5.5a4.9 4.9 0 0 0-1.8 1.2 4.9 4.9 0 0 0-1.2 1.8c-.3.6-.45 1.4-.5 2.5C2 9.3 2 9.6 2 12s0 2.7.06 3.7c.05 1.1.2 1.8.5 2.5a4.9 4.9 0 0 0 1.2 1.8 4.9 4.9 0 0 0 1.8 1.2c.6.3 1.4.45 2.5.5 1 .06 1.3.06 4 .06s2.7 0 3.7-.06c1.1-.05 1.8-.2 2.5-.5a5 5 0 0 0 2.9-2.9c.3-.6.45-1.4.5-2.5.06-1 .06-1.3.06-3.7s0-2.7-.06-3.7c-.05-1.1-.2-1.8-.5-2.5a4.9 4.9 0 0 0-1.2-1.8 4.9 4.9 0 0 0-1.8-1.2c-.6-.3-1.4-.45-2.5-.5C14.7 2.2 14.4 2.2 12 2.2Zm0 1.8c2.7 0 3 0 4 .05.9.04 1.4.2 1.7.32.4.17.7.37 1 .68.3.3.5.6.68 1 .13.34.28.83.32 1.72.05 1 .05 1.3.05 3.6s0 2.6-.05 3.6c-.04.9-.2 1.4-.32 1.72-.17.4-.37.7-.68 1-.3.3-.6.5-1 .68-.34.13-.83.28-1.72.32-1 .05-1.3.05-3.6.05s-2.6 0-3.6-.05c-.9-.04-1.4-.2-1.72-.32-.4-.17-.7-.37-1-.68-.3-.3-.5-.6-.68-1-.13-.34-.28-.83-.32-1.72-.05-1-.05-1.3-.05-3.6s0-2.6.05-3.6c.04-.9.2-1.4.32-1.72.17-.4.37-.7.68-1 .3-.3.6-.5 1-.68.34-.13.83-.28 1.72-.32 1-.05 1.3-.05 3.6-.05Zm0 3.06a4.94 4.94 0 1 0 0 9.88 4.94 4.94 0 0 0 0-9.88Zm0 8.14a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4Zm6.3-8.34a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0Z"/></svg></a>
+      <a href="https://x.com/melaha_sa" target="_blank" rel="noopener" aria-label="X" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1px solid rgba(242,237,228,.22);color:inherit"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.2l-7 8 7.3 9.9h-5.6l-4.4-5.9-5 5.9H2.8l7.3-8.5L3.1 3h5.7l4.1 5.5L17.5 3Zm-1.1 15.9h1.8L7.6 4.9H5.7l10.7 14Z"/></svg></a>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900}}">
+const DATA = {
+  'ochikn-crispy': {
+    client: 'أوشكن', year: '٢٠٢٥', service: 'تطوير منتج + حملة',
+    title: 'الكريسبي عربي.', cover: 'assets/ochikn-crispy-square.png',
+    images: ['assets/ochikn-crispy-stats.png', 'assets/ochikn-crispy-cover.png'],
+    tiktoks: ['7542132467000495367', '7543317196055776530', '7544062450442800402'],
+    caption: 'تطوير منتج + حملة · OCHIKN × MELAHA — 2025',
+    intro: 'دخلنا مع العميل من نقطة أبعد من الإعلان: من المنتج نفسه.',
+    hero: { v: '٢٦٪', l: 'زيادة صافية فوق المبيعات المتوقعة — بميزانية إعلانية محدودة.' },
+    kpis: [], next: ['ochikn-mistake', 'masnaf-mango', 'ochikn'],
+    blocks: [
+      { n: '٠١', t: 'وش كان الوضع؟', p: ['دخلنا مع العميل من نقطة أبعد من الإعلان: من المنتج نفسه. اقترحنا المنتج، واشتغلنا معه على التسعير بحيث يناسب الفئة المستهدفة ويكون العرض مغرياً للشراء. الميزانية الإعلانية كانت محدودة.'], b: [] },
+      { n: '٠٢', t: 'وش قررنا نسوي؟', p: ['لما الميزانية محدودة، المنتج والسعر هما اللي يشتغلان، والإعلان يوصّل بس. بنينا العرض بحيث يكون قرار الشراء سهل من أول مرة يشوفه العميل.'], b: [] },
+      { n: '٠٣', t: 'كيف نزّلناها؟', p: ['سوينا محتوى يغري وإعلانات صور أطلقناها في الإنستقرام والتيك توك، وتعاونّا مع مؤثرين.'], b: [] }
+    ]
+  },
+  'ochikn-mistake': {
+    client: 'أوشكن', year: '٢٠٢٦', service: 'إطلاق منتج + حملة',
+    title: 'مو كل غلط غلط.', cover: '', placeholder: true,
+    caption: 'إطلاق منتج + حملة · OCHIKN × MELAHA — 2026',
+    intro: 'أوشكن كان يبي يطلق منتجاً جديداً، والتوقيت جا قريب من كأس العالم.',
+    kpis: [], next: ['ochikn-crispy', 'masnaf-mango', 'aryaf-mango'],
+    blocks: [
+      { n: '٠١', t: 'وش كان الوضع؟', p: ['أوشكن كان يبي يطلق منتجاً جديداً، والتوقيت جا قريب من كأس العالم.', 'دخلنا مع العميل من مرحلة البحث: بحث للمنافسين والجمهور. وطلعت الملاحظة اللي غيّرت المشروع — الفرصة مو في منتج واحد، الفرصة في منيو كامل.'], b: [] },
+      { n: '٠٢', t: 'وش قررنا نسوي؟', p: ['رفعنا التوصية للعميل: بدل منتج واحد، ناشفل منيو بالكامل. وافق المطعم وطوّر المنيو.', 'بعدها احتجنا زاوية تربط الإطلاق بكأس العالم بشكل مو مباشر ومو مستهلك. الربط طلع من التاريخ نفسه: مارادونا سجّل أشهر هدف في كأس العالم بغلطة، سجّل بيده. وأوشكن طلّع الناشفل بغلطة، وطلعت رهيبة.', 'من هنا جا التوجّه: مو كل غلط غلط.'], b: [] },
+      { n: '٠٣', t: 'كيف نزّلناها؟', p: [], b: ['بناء التوجّه الإبداعي للحملة كاملاً على الفكرة', 'إنتاج فيديو الحملة'] }
+    ]
+  },
+  'masnaf-mango': {
+    client: 'مصنف', year: '٢٠٢٦', service: 'حملة موسمية متكاملة',
+    title: 'موسم المانجو.', cover: '', placeholder: true,
+    caption: 'حملة موسمية متكاملة · MASNAF × MELAHA — 2026',
+    intro: 'مصنف حاب يدخل موسم المانجو بمنتج يبيعه في فرع الرياض.',
+    kpis: [], next: ['ochikn-crispy', 'ochikn-mistake', 'aryaf-mango'],
+    blocks: [
+      { n: '٠١', t: 'وش كان الوضع؟', p: ['مصنف حاب يدخل موسم المانجو بمنتج يبيعه في فرع الرياض. المطعم معروف بأكله، بس المانجو منتج جديد عليه، والموسم قصير، والمنافسة عليه من مصادر متخصصة في المانجو.', 'التحدي: كيف يشتري الناس المانجو من مطعم؟'], b: [] },
+      { n: '٠٢', t: 'وش قررنا نسوي؟', p: ['بدل ما نعلن عن منتج واحد، بنينا موسماً كاملاً. المانجو ما صار سلعة تُباع في الفرع، صار حدثاً يعيشه العميل في المطعم.', 'هوية بصرية خاصة بالموسم، ومنتجات موسمية تدور حول نفس الفكرة: مانجو للبيع، سلطة مانجو، مشروب مانجو، وآيس كريم مانجو كضيافة في فرع جازان.'], b: [] },
+      { n: '٠٣', t: 'كيف نزّلناها؟', p: [], b: ['الهوية البصرية للموسم — هوية كاملة طُبّقت على الحسابات والبايو وجميع المخرجات الإبداعية للحملة', 'المحتوى الرقمي — صور وفيديو للمنتجات والأطباق الموسمية', 'إعلانات ممولة على السوشال ميديا', 'جاهز — إتاحة المنتج على التطبيق'], b2: [] },
+      { n: '٠٤', t: 'وش صار؟', p: ['المنتج نفد يومياً طوال الموسم.'], b: [] }
+    ]
+  },
+  'aryaf-mango': {
+    client: 'مانجو أرياف جازان', year: '٢٠٢٦', service: 'إنتاج فيديو',
+    title: 'خذها من مصدرها.', cover: 'assets/aryaf-mango-cover.png', yt: 'Ubrr75uC7q0',
+    caption: 'إنتاج فيديو · ARYAF JAZAN MANGO × MELAHA — 2026',
+    intro: 'مانجو أرياف جازان كان يحتاج فيديو يوصّل قيمة المانجو الجازاني للناس.',
+    kpis: [], next: ['masnaf-mango', 'ochikn-mistake', 'harafiyeen'],
+    blocks: [
+      { n: '٠١', t: 'الفكرة', p: ['مانجو أرياف جازان كان يحتاج فيديو يوصّل قيمة المانجو الجازاني للناس.', 'البحث طلّع نقطة مختلفة عن المتوقع: القيمة موجودة أصلاً. الناس تعرف إن المانجو الجازاني ممتاز، ما يحتاج نقنعهم.', 'المشكلة في مكان ثاني: مو كل من قال «مانجو جازان» يبيع مانجو جازان فعلاً.', 'فتحوّل السؤال من «ليش المانجو الجازاني؟» إلى «من وين تاخذه؟»', 'ومن هنا طلع عنوان الفيديو: خذها من مصدرها.'], b: [] },
+      { n: '٠٢', t: 'كيف صوّرناه', p: ['إنتاج كامل من ملاحة، من المفهوم للسيناريو للتصوير للتسليم.'], b: [] }
+    ]
+  },
+  jazan: {
+    client: 'مصنف · مطعم', year: '٢٠٢٥', service: 'حملة إعلانية متكاملة',
+    title: 'نروي جازان في مائدة.', cover: 'https://img.youtube.com/vi/9wax5oZwc28/maxresdefault.jpg',
+    yt: '9wax5oZwc28', caption: 'الفيلم الرئيسي للحملة — MASNAF × MELAHA — 2025',
+    intro: 'حملة مختلفة في فكرتها وهدفها. الهدف الأساسي كان دخول مطعم مصنف لسوق الرياض بشكل قوي ومؤثر، مع توضيح أن مصنف ليس مطعماً يقدّم أكلاً فقط، بل يقدّم ثقافة وهوية جازانية.',
+    kpis: [], next: ['masnaf-eid', 'masnaf-fish', 'masnaf-mango'],
+    blocks: [
+      { n: '٠١', t: 'البحث', p: ['بدأنا الحملة بمرحلة بحث تسويقي عميقة. درسنا المنافسين في سوق الرياض، وفهمنا طريقة تواصلهم مع الجمهور، وأساليبهم في الترويج وتجربة المطعم.', 'بالتوازي، اشتغلنا على دراسة الجمهور لتحديد الفئات الأنسب خلال فترة الافتتاح. حددنا فئتين أساسيتين نركز عليهم في بداية دخول السوق، وبنينا استراتيجياتنا بناءً على سلوكهم واهتماماتهم.', 'كما ساعدنا تحليل المنافسين في تحديد الزوايا اللي نقدر نتميّز فيها، سواء من ناحية الرسالة أو أسلوب التقديم.'], b: [] },
+      { n: '٠٢', t: 'الاستراتيجيات', p: ['بناءً على البحث، اشتغلنا على مجموعة استراتيجيات متكاملة تهدف إلى:'], b: ['جذب الانتباه', 'توضيح فكرة الحملة', 'إيصال رسالة مصنف بشكل واضح وسلس', 'خلق فضول وتجربة مختلفة قبل وأثناء الافتتاح'] },
+      { n: '٠٣', t: 'الإعلانات', p: ['نفّذنا فيديو رئيسي استثنائي يشرح فكرة الحملة بشكل غير مباشر وجذّاب، ويعكس هوية مصنف الثقافية بدون شرح مباشر. بالإضافة إلى ٣ إعلانات صور تخدم الرسالة وتدعم الحضور البصري للحملة.'], b: [] }
+    ]
+  },
+  'masnaf-eid': {
+    client: 'مصنف · مطعم', year: '٢٠٢٥', service: 'فكرة + إنتاج فيديو سردي',
+    title: 'فطور العيد في جازان.', cover: 'https://img.youtube.com/vi/q7gqmu6uD5k/maxresdefault.jpg',
+    yt: 'q7gqmu6uD5k', caption: 'فيديو سردي · موسم عيد الفطر — MASNAF × MELAHA — EID 2025',
+    intro: 'في هذا المشروع، تولّت ملاحة تقديم الفكرة والإنتاج الكامل لفيديو سردي يعرض فطور العيد في جازان، ضمن حملة موسم عيد الفطر لصالح مطعم مصنف.',
+    kpis: [{ v: '٧٤٣٠٠٠+', l: 'مشاهدة للفيديو' }, { v: '٢٠٢٥', l: 'موسم عيد الفطر' }, { v: 'سردي', l: 'توثيقي اجتماعي' }],
+    next: ['jazan', 'masnaf-fish', 'masnaf-mango'],
+    blocks: [
+      { n: '٠١', t: 'الفكرة', p: ['اعتمدنا على السرد البسيط لتوثيق واحدة من العادات الجميلة التي تعيشها أحياء جازان صباح العيد، حيث يجتمع أهل الحي على مائدة واحدة في أجواء مليئة بالكرم والبهجة.', 'ركزنا على خلق حالة شعورية دافئة تعزز الارتباط الثقافي والعاطفي بين المطعم والمجتمع.'], b: [] },
+      { n: '٠٢', t: 'التنفيذ', p: ['جاء الفيديو ليحكي قصة لا تُنسى عن الفطور الجماعي، باستخدام لقطات طبيعية وصوت راوٍ يقرّب المشهد من قلب المشاهد.'], b: ['الخدمة: فكرة + إنتاج فيديو سردي', 'الأسلوب: توثيقي اجتماعي · سردي', 'السنة: ٢٠٢٥'] },
+      { n: '٠٣', t: 'الأثر', p: ['حقق الفيديو أكثر من ٧٤٣٬٠٠٠ مشاهدة، وعزّز حضور مصنف خلال موسم العيد عبر محتوى سردي مليء بالدفء والهوية.'], b: [] }
+    ]
+  },
+  'masnaf-fish': {
+    client: 'مصنف · مطعم', year: '٢٠٢٥', service: 'فكرة + كتابة + إنتاج فيديو',
+    title: 'ليش نفطر سمك؟', cover: 'https://img.youtube.com/vi/Xj-yP8CU0Cs/maxresdefault.jpg',
+    yt: 'Xj-yP8CU0Cs', caption: 'فيديو ضمن حملة «الخير في أصله» — الرياض · MASNAF × MELAHA',
+    intro: 'فيديو لمطعم مصنف، ضمن حملة «الخير في أصله» في الرياض. يجاوب على سؤال يخطر في بال كل واحد من أهل الرياض يسمع عن فطور جازان.',
+    kpis: [], next: ['masnaf-eid', 'harafiyeen', 'aryaf-mango'],
+    blocks: [
+      { n: '٠١', t: 'السؤال', p: ['«ليش نفطر سمك؟» — سؤال طبيعي يدور في بال أي شخص برّه جازان لمّا يسمع عن عادة فطور أهلها.', 'اخترنا نواجه السؤال مباشرة، ونبني عليه الفيلم كله، بدل ما نتجاهله.'], b: [] },
+      { n: '٠٢', t: 'الربط بفكرة الحملة', p: ['ربطنا الإجابة بفكرة «الخير في أصله»: إن الخير، اللي هو الأكل، موجود في أصلنا الشعبي. فطور السمك مو غريب، هو امتداد لإرث.'], b: [] },
+      { n: '٠٣', t: 'التنفيذ', p: ['ملاحة مسكت الفيديو كاملاً: الفكرة، الكتابة، والإنتاج.'], b: ['الخدمة: فكرة + سيناريو + إنتاج', 'الحملة: «الخير في أصله» — الرياض', 'الأسلوب: توثيقي · سردي'] }
+    ]
+  },
+  harafiyeen: {
+    client: 'بيت الحرفيين', year: '٢٠٢٥', service: 'فكرة + سيناريو + إنتاج',
+    title: 'أصل الحرفة.', cover: 'https://img.youtube.com/vi/0jwEdZ6QNfE/maxresdefault.jpg',
+    yt: '0jwEdZ6QNfE', caption: 'فيديو يحكي قصة الحرفة من جذورها — BAYT AL-HARAFIYEEN × MELAHA',
+    intro: 'فيديو لبيت الحرفيين، يحكي قصة الحرفة من جذورها وكيف تطوّرت داخل البيت.',
+    kpis: [], next: ['masnaf-fish', 'roban', 'aryaf-mango'],
+    blocks: [
+      { n: '٠١', t: 'الفكرة', p: ['اشتغلنا على الفيديو بفكرة عميقة تربط بين الماضي والحاضر، وتُظهر إن الحرفة مو مجرد صنعة، هي امتداد لإرث ومعنى.'], b: [] },
+      { n: '٠٢', t: 'التنفيذ', p: ['ملاحة مسكت العمل كاملاً: الفكرة الإبداعية، السيناريو، والإنتاج.'], b: ['الخدمة: فكرة + سيناريو + إنتاج', 'الأسلوب: سردي · إرثي', 'السنة: ٢٠٢٥'] }
+    ]
+  },
+  roban: {
+    client: 'الربّان · مطعم', year: '٢٠٢٥', service: 'حملة إعلانية + محتوى مؤثرين',
+    title: 'الربّان يفهمك.', cover: 'https://melaha.co/images/roban-cover.png',
+    tiktok: '7473849353099152695',
+    images: ['https://melaha.co/images/roban-cover.png'],
+    caption: 'حملة الربّان يفهمك — منتج محسّن، تجربة أغنى · ROBAN × MELAHA — 2025',
+    intro: 'حملة هدفها توصيل تجربة محسّنة وغنية للجمهور، توضّح إن الربّان يقدّم قيمة عالية مقابل السعر — بدون الحاجة للتصريح بتفاصيل الأسعار أو تغييراتها.',
+    kpis: [{ v: '٦٧١٧٠٠', l: 'انطباع رقمي خلال الحملة' }, { v: '٥٠٠٠٠٠', l: 'الهدف الرئيسي — تحقّق' }, { v: '+٣٤٪', l: 'تجاوز للمستهدف' }],
+    next: ['fournya', 'ochikn', 'ochikn-crispy'],
+    blocks: [
+      { n: '٠١', t: 'التحدّي', p: ['المنتج تطوّر فعلياً: حجم الساندويتش زاد، عدد قطع القمبري زاد، الحشوة صارت أغنى، والسعر صار أقل. لكن السؤال كان: كيف نوصل التغيير الإيجابي للناس بدون ما نتكلم بشكل مباشر عن السعر أو نقول «كان كذا وصار كذا»؟'], b: [] },
+      { n: '٠٢', t: 'الفهم', p: ['بعد الافتتاح، كثير من العملاء أخذوا انطباع إن حجم الساندويتش صغير مقارنة بالسعر. الانطباع هذا كان نقطة الانطلاق — مو نتجاهله، نستخدمه.', 'قررنا نردّ على هذا الانطباع بحملة كاملة عنوانها: نسمع لك، ونفهمك.'], b: [] },
+      { n: '٠٣', t: 'الحل الإبداعي', p: ['اشتغلنا بأسلوب بسيط وقريب من الناس، وخلّينا التجربة هي اللي تتكلم بدل الكلام المباشر:'], b: ['صوّرنا تفاصيل المنتج بلقطات تركّز على الحجم والحشوة والقطع', 'اشتغلنا مع مؤثرين يعرضون كل تحسين بطريقتهم العفوية', 'جعلنا الجمهور يشوف الفرق بنفسه — بدون مقارنات سعرية مباشرة', 'ركّبنا الرسالة على هاشتاج واحد قابل للتداول: #الربان_يفهمك'] },
+      { n: '★', t: 'النتائج', p: [], b: ['٦٧١٬٧٠٠ انطباع رقمي خلال فترة الحملة', 'تجاوُز الهدف الرئيسي (٥٠٠٬٠٠٠ انطباع) بفارق ٣٤٪', 'وصول واسع ومتكرر للفكرة ضمن السوق المستهدف', 'تعزيز تصوّر القيمة مقابل السعر لدى العملاء'] }
+    ]
+  },
+  fournya: {
+    client: 'فرنية · مطعم', year: '٢٠٢٥', service: 'بحث + استراتيجية + حملة محتوى وإعلانات',
+    title: 'بفطورك تزين أمورك.', cover: 'https://melaha.co/images/fournya-1.png',
+    tiktok: '7550372844530584850',
+    images: ['https://melaha.co/images/fournya-1.png', 'https://melaha.co/images/fournya-2.png', 'https://melaha.co/images/fournya-3.png', 'https://melaha.co/images/fournya-4.png'],
+    caption: 'وجبة الفطور — ١٩ ريال · فيديو + ٣ صور إعلانية · FOURNYA × MELAHA — 2025',
+    intro: 'بعد مراجعة الأرقام، لاحظنا إن عدد العملاء جيد لكن مو ممتاز، ومتوسط الفاتورة منخفض. السؤال الأساسي: هل المشكلة في الأسعار؟ ولا في وصول فرنية للجمهور المناسب؟',
+    kpis: [{ v: '١٩ ريال', l: 'سعر وجبة الفطور' }, { v: '٤', l: 'إعلانات الحملة' }, { v: '★', l: 'ارتفاع ملحوظ بالمبيعات' }],
+    next: ['roban', 'ochikn', 'masnaf-mango'],
+    blocks: [
+      { n: '٠١', t: 'دراسة المنافسين', p: ['بدينا بدراسة المنافسين في نفس الفئة، وراجعنا أسعارهم وعروضهم. النتيجة كانت واضحة: أسعار فرنية أقل نسبياً من السوق، لكن العلامة ما كانت حاضرة بقوة عند الجمهور.'], b: [] },
+      { n: '٠٢', t: 'فهم الجمهور', p: ['انتقلنا للمرحلة الأهم: فهم الجمهور الحالي لفرنية. حلّلنا سلوك الزوار، أوقات الزيارة، نوع الطلبات المتكررة، وطريقة اختيارهم للوجبات.'], b: ['جمهور صباحي مرتبط بالدوام', 'يحب الخيارات السريعة والواضحة', 'ما يفضّل التعقيد أو التجارب الثقيلة في بداية يومه'] },
+      { n: '٠٣', t: 'تصميم المنتج', p: ['من خلال هذا التحليل، حدّدنا المنتج الأنسب لهم — منتج يقدر يرفع قيمة الفاتورة بدون ما يحس العميل إنه يدفع أكثر من اللازم. صمّمنا منتج متناسب مع سلوكهم وبسعر جذاب لفترة محدودة.', 'سمّيناه «وجبة الفطور» — اسم بسيط ومباشر، لأن جمهور فرنية يفضّل الوضوح ومايحب المسميات المعقّدة.'], b: [] },
+      { n: '٠٤', t: 'الفكرة الإبداعية', p: ['لاحظنا إن بداية اليوم تلعب دور كبير في مزاج الشخص وإنتاجيته. اللي يبدأ يومه بفطور كويس، غالباً يومه يكون أفضل، والعكس صحيح.', 'بُنيت الرسالة على هذا المعنى، وطلع معنا سلوغن الحملة: «بفطورك تزين أمورك».'], b: [] },
+      { n: '٠٥', t: 'التنفيذ', p: [], b: ['إعلان فيديو رئيسي + ٣ صور إعلانية', 'تعاون مع مؤثرين معروفين بمحتوى الفطور والروتين الصباحي الهادئ', 'إيصال الرسالة بشكل طبيعي وقريب من الجمهور'] },
+      { n: '★', t: 'النتيجة', p: ['الحملة رفعت المبيعات بشكل ملحوظ، وأكدت لنا إن البحث وفهم السلوك هو الأساس لأي حملة ناجحة.'], b: [] }
+    ]
+  },
+  ochikn: {
+    client: 'أوشكن · مطعم', year: '٢٠٢٤', service: 'حملة إعلانية متكاملة',
+    title: 'أوشكن يوصّل للجامعة.', cover: 'https://melaha.co/images/ochikn-cover.png',
+    images: ['https://melaha.co/images/ochikn-cover.png', 'https://melaha.co/images/ochikn-1.png', 'https://melaha.co/images/ochikn-2.png'],
+    caption: 'إعلانات الحملة الرئيسية · OCHIKN × MELAHA — 2024',
+    intro: 'حملة أطلقناها مع مطعم أوشكن بالتزامن مع عودة الدراسة، لإطلاق منتج جديد موجّه للطلاب. التحدي: كيف نوصل لفئة الطلاب تحديداً، ونثبّت المنتج كخيارهم الأول للغداء بين المحاضرات، خلال نافذة زمنية محدودة.',
+    kpis: [{ v: '٢٦ ريال', l: 'سعر الكومبو' }, { v: '٣', l: 'استراتيجيات ترويج' }, { v: '٨ص – ٣م', l: 'نافذة عرض الإعلانات' }],
+    next: ['fournya', 'jazan', 'ochikn-crispy'],
+    blocks: [
+      { n: '٠١', t: 'البحث ودراسة المنتج', p: ['بدينا الحملة بدراسة المنتج نفسه قبل أي شي ثاني. اكتشفنا إن المنتج مناسب جداً لفئة الطلاب لأسباب موضوعية:'], b: ['المطعم قريب من الجامعة', 'السعر ٢٦ ريال فقط', 'وجبة غداء متكاملة (برجر + ستربس + فرايز + مشروب)', 'يناسب ذوق الطلاب'] },
+      { n: '٠٢', t: 'الاستراتيجيات', p: ['اقترحنا على إدارة أوشكن ثلاث استراتيجيات ترويج متكاملة، اشتغلنا عليها بالتوازي، وكل واحدة لها دور محدد في رحلة الوصول للطالب وإقناعه بتجربة المنتج.'], b: ['التسويق بالمحتوى', 'الإعلانات المدفوعة', 'المشاهير'] },
+      { n: '٠٣', t: 'الإعلانات المدفوعة', p: ['ركّزنا الإعلانات على المنصات اللي يستخدمها الطلاب فعلياً: سناب شات وانستقرام. واخترنا توقيت عرض الإعلان بدقة:'], b: ['إطلاق الإعلانات في أوقات الدوام فقط (٨ص – ٣م)', 'تحديد نطاق الظهور عند الجامعات والمدارس فقط', 'أكثر من نسخة إعلانية لاختبار الأفضل أداءً'] },
+      { n: '٠٤', t: 'التسويق بالمحتوى', p: ['اشتغلنا على المحتوى بزوايا موجّهة للطالب، والرسالة الكلية: «تعب الجامعة يشيله الكومبو».'], b: ['إظهار سعر التوصيل في المنشورات والستوري كنقطة جذب رئيسية', 'مسابقة تصوير في الستوري لزيادة الانتشار العضوي', 'إعادة نشر ستوري العملاء الساعة ١ص لضمان ظهور البراند في الحسابات الأولى'] },
+      { n: '★', t: 'النتيجة', p: ['الحملة حققت نتائج ملموسة في تثبيت منتج أوشكن كخيار أساسي للطلاب خلال فترة عودة الدراسة، وأثبتت إن استغلال التوقيت الصح + استهداف دقيق + رسالة موجّهة = حملة تشتغل.'], b: [] }
+    ]
+  }
+};
+
+class Component extends DCLogic {
+  componentDidMount() {
+    this.build();
+    this._hash = () => { this.build(); window.scrollTo(0, 0); };
+    window.addEventListener('hashchange', this._hash);
+  }
+
+  build() {
+    const EASE = 'cubic-bezier(.16,1,.3,1)';
+    const id = (location.hash || '#ochikn-crispy').slice(1);
+    const p = DATA[id] || DATA.jazan;
+    const docTitle = p.title.replace('.', '') + ' — ' + p.client.split(' ·')[0] + ' · ملاحة';
+    document.title = docTitle;
+    setTimeout(() => { document.title = docTitle; }, 60);
+    setTimeout(() => { document.title = docTitle; }, 600);
+
+    const q = s => document.querySelector(s);
+    q('[data-eyebrow]').textContent = p.title.replace('.', '') + ' — ' + p.client.split(' ·')[0];
+    q('[data-title]').textContent = p.title;
+    q('[data-intro]').textContent = p.intro;
+    q('[data-caption]').textContent = p.caption;
+
+    const meta = q('[data-metarow]');
+    meta.innerHTML = '';
+    [['العميل', p.client], ['السنة', p.year], ['الخدمة', p.service]].forEach(([l, v]) => {
+      const d = document.createElement('div');
+      d.innerHTML = '<div style="font-size:12px;color:rgba(242,237,228,.45);margin-bottom:10px">' + l + '</div>' +
+        '<div style="font-family:var(--head);font-weight:700;font-size:clamp(17px,1.5vw,22px)">' + v + '</div>';
+      meta.appendChild(d);
+    });
+
+    const media = q('[data-media]');
+    media.innerHTML = '';
+    if (p.placeholder && !p.yt && !p.tiktok && !(p.images || []).length) {
+      const ph = document.createElement('div');
+      ph.style.cssText = 'width:100%;align-self:stretch;aspect-ratio:4/3;border-radius:20px;border:1px solid rgba(242,237,228,.14);background:#1A2A38 repeating-linear-gradient(135deg,rgba(242,237,228,.05) 0 16px,rgba(242,237,228,.02) 16px 32px)';
+      media.appendChild(ph);
+    }
+    if (p.images && p.images.length) {
+      const g = document.createElement('div');
+      g.style.cssText = 'display:flex;flex-direction:column;gap:clamp(14px,1.8vw,22px)';
+      p.images.forEach(src => {
+        const c = document.createElement('div');
+        c.style.cssText = 'position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(242,237,228,.14);background:#0C1E2C';
+        c.innerHTML = '<img src="' + src + '" alt="" loading="lazy" style="width:100%;height:auto;display:block;transition:transform 1.2s ' + EASE + '" />';
+        c.addEventListener('mouseenter', () => { c.firstChild.style.transform = 'scale(1.06)'; });
+        c.addEventListener('mouseleave', () => { c.firstChild.style.transform = 'none'; });
+        g.appendChild(c);
+      });
+      media.appendChild(g);
+    }
+    if (p.yt) {
+      const w = document.createElement('div');
+      w.style.cssText = 'position:relative;aspect-ratio:16/9;border-radius:20px;overflow:hidden;border:1px solid rgba(242,237,228,.14);background:#0C1E2C';
+      w.innerHTML = '<iframe src="https://www.youtube.com/embed/' + p.yt + '?rel=0&modestbranding=1" title="' + p.title + '" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>';
+      media.appendChild(w);
+    }
+    if (p.tiktok || (p.tiktoks && p.tiktoks.length)) {
+      const ids = p.tiktoks || [p.tiktok];
+      const g = document.createElement('div');
+      g.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(12px,1.6vw,20px)';
+      ids.forEach(id => {
+        const w = document.createElement('div');
+        w.style.cssText = 'position:relative;width:100%;aspect-ratio:9/14;border-radius:20px;overflow:hidden;border:1px solid rgba(242,237,228,.14);background:#0C1E2C';
+        w.innerHTML = '<iframe src="https://www.tiktok.com/embed/v2/' + id + '?lang=ar" title="' + p.title + '" allow="encrypted-media;fullscreen;picture-in-picture" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>';
+        g.appendChild(w);
+      });
+      media.appendChild(g);
+    }
+
+    const kw = q('[data-kpis]');
+    kw.innerHTML = '';
+    kw.style.gridTemplateColumns = 'repeat(auto-fit,minmax(200px,1fr))';
+    kw.parentElement.style.display = (p.kpis.length || p.hero) ? '' : 'none';
+    if (p.hero) {
+      const d = document.createElement('div');
+      d.setAttribute('data-reveal', '');
+      d.style.cssText = 'grid-column:1/-1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(14px,2vw,26px);padding:clamp(40px,6vw,90px) clamp(22px,3vw,40px);border:1px solid rgba(242,237,228,.14);border-radius:24px;background:rgba(242,237,228,.03)';
+      d.innerHTML = '<div style="font-family:var(--head);font-weight:900;font-size:clamp(80px,16vw,240px);line-height:.85;color:#93B8CE">' + p.hero.v + '</div>' +
+        '<div style="max-width:34ch;font-size:clamp(15px,1.35vw,20px);line-height:1.75;color:rgba(242,237,228,.72)">' + p.hero.l + '</div>';
+      kw.appendChild(d);
+    }
+    p.kpis.forEach(k => {
+      const d = document.createElement('div');
+      d.setAttribute('data-reveal', '');
+      d.style.cssText = 'padding:clamp(22px,2.4vw,32px);border:1px solid rgba(242,237,228,.14);border-radius:18px;background:rgba(242,237,228,.03)';
+      d.innerHTML = '<div style="font-family:var(--head);font-weight:900;font-size:clamp(30px,3.4vw,52px);line-height:1;color:#93B8CE">' + k.v + '</div>' +
+        '<div style="font-size:14px;color:rgba(242,237,228,.6);margin-top:12px;line-height:1.6">' + k.l + '</div>';
+      kw.appendChild(d);
+    });
+
+    const bw = q('[data-blocks]');
+    bw.innerHTML = '';
+    p.blocks.forEach(b => {
+      const row = document.createElement('div');
+      row.setAttribute('data-reveal', '');
+      row.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(20px,3vw,60px);padding:clamp(28px,3.6vw,50px) 0;border-top:1px solid rgba(242,237,228,.14)';
+      const head = '<div><div style="font-family:var(--head);font-weight:900;font-size:clamp(28px,3vw,44px);line-height:1;color:rgba(147,184,206,.85);margin-bottom:14px">' + b.n + '</div>' +
+        '<h3 style="font-size:clamp(21px,2.2vw,32px);font-weight:700;line-height:1.25">' + b.t + '</h3></div>';
+      const paras = b.p.map(t => '<p style="font-size:clamp(15px,1.15vw,17px);line-height:1.85;color:rgba(242,237,228,.72);margin:0">' + t + '</p>').join('');
+      const bullets = b.b.length ? '<ul style="display:flex;flex-direction:column;gap:10px;margin:0;padding:0;list-style:none">' +
+        b.b.map(t => '<li style="display:flex;gap:12px;font-size:15px;line-height:1.7;color:rgba(242,237,228,.66)"><span style="color:#93B8CE;flex:none">—</span><span>' + t + '</span></li>').join('') + '</ul>' : '';
+      row.innerHTML = head + '<div style="display:flex;flex-direction:column;gap:18px;max-width:62ch">' + paras + bullets + '</div>';
+      bw.appendChild(row);
+    });
+
+    const nx = q('[data-next]');
+    nx.innerHTML = '';
+    (p.next || []).forEach(k => {
+      const o = DATA[k];
+      if (!o) return;
+      const a = document.createElement('a');
+      a.href = '#' + k;
+      a.setAttribute('data-magnet', '');
+      a.style.cssText = 'position:relative;display:flex;gap:18px;align-items:center;padding:16px;border:1px solid rgba(242,237,228,.14);border-radius:18px;background:rgba(242,237,228,.03);transition:transform .5s ' + EASE + ',border-color .5s';
+      const thumb = o.cover
+        ? '<img src="' + o.cover + '" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover" />'
+        : '<span style="display:block;width:100%;height:100%;background:repeating-linear-gradient(135deg,rgba(242,237,228,.06) 0 12px,rgba(242,237,228,.02) 12px 24px)"></span>';
+      a.innerHTML = '<div style="width:96px;height:72px;border-radius:12px;overflow:hidden;flex:none;background:#1A2A38">' + thumb + '</div>' +
+        '<div><div style="font-size:12px;color:rgba(242,237,228,.5);margin-bottom:6px">' + o.client + ' · ' + o.year + '</div>' +
+        '<div style="font-family:var(--head);font-weight:700;font-size:clamp(17px,1.7vw,24px);line-height:1.25">' + o.title.replace('.', '') + '</div></div>' +
+        '<div style="margin-inline-start:auto;color:#93B8CE;font-size:20px;padding-inline:8px">↗</div>';
+      a.addEventListener('mouseenter', () => { a.style.transform = 'translateY(-4px)'; a.style.borderColor = 'rgba(147,184,206,.5)'; });
+      a.addEventListener('mouseleave', () => { a.style.transform = 'none'; a.style.borderColor = 'rgba(242,237,228,.14)'; });
+      nx.appendChild(a);
+    });
+
+    this.motion();
+  }
+
+  motion() {
+    const EASE = 'cubic-bezier(.16,1,.3,1)';
+    const h1 = document.querySelector('[data-title]');
+    if (h1) {
+      const words = (h1.textContent || '').trim().split(/\s+/);
+      h1.textContent = '';
+      words.forEach((w, i) => {
+        const mask = document.createElement('span');
+        mask.style.cssText = 'display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-bottom:-.12em';
+        const inner = document.createElement('span');
+        inner.textContent = w;
+        inner.style.cssText = 'display:inline-block;transform:translateY(108%);transition:transform 1s ' + EASE + ' ' + (i * 70) + 'ms';
+        mask.appendChild(inner);
+        h1.appendChild(mask);
+        if (i < words.length - 1) h1.appendChild(document.createTextNode(' '));
+      });
+      setTimeout(() => h1.querySelectorAll('span > span').forEach(s => { s.style.transform = 'translateY(0)'; }), 120);
+    }
+
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      if (el.dataset.shown) return;
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity .9s ' + EASE + ',transform .9s ' + EASE;
+    });
+    const show = el => { el.dataset.shown = '1'; el.style.opacity = '1'; el.style.transform = 'none'; };
+    if (this._io) this._io.disconnect();
+    this._io = new IntersectionObserver(es => {
+      es.forEach(e => { if (e.isIntersecting) { show(e.target); this._io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('[data-reveal]').forEach(el => this._io.observe(el));
+    setTimeout(() => document.querySelectorAll('[data-reveal]').forEach(show), 3200);
+
+    const cur = document.querySelector('[data-cursor]');
+    if (!this._cursorIv) {
+      let cx = 0, cy = 0, tx = 0, ty = 0;
+      this._move = e => { tx = e.clientX; ty = e.clientY; if (cur) cur.style.opacity = '1'; };
+      window.addEventListener('mousemove', this._move, { passive: true });
+      this._cursorIv = setInterval(() => {
+        cx += (tx - cx) * 0.2; cy += (ty - cy) * 0.2;
+        if (cur) cur.style.transform = 'translate(' + cx.toFixed(1) + 'px,' + cy.toFixed(1) + 'px) translate(-50%,-50%)';
+      }, 16);
+    }
+    document.querySelectorAll('[data-magnet]').forEach(el => {
+      if (el.dataset.mag) return;
+      el.dataset.mag = '1';
+      el.addEventListener('mouseenter', () => { if (cur) { cur.style.width = '46px'; cur.style.height = '46px'; cur.style.background = 'rgba(147,184,206,.18)'; } });
+      el.addEventListener('mouseleave', () => { if (cur) { cur.style.width = '12px'; cur.style.height = '12px'; cur.style.background = 'rgba(147,184,206,.35)'; } });
+    });
+
+    if (!this._onScroll) {
+      const nav = document.querySelector('[data-nav]');
+      const bar = document.querySelector('[data-progress]');
+      let lastY = window.scrollY;
+      this._onScroll = () => {
+        const y = window.scrollY;
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        if (bar) bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+        document.querySelectorAll('[data-parallax]').forEach(el => {
+          const r = el.getBoundingClientRect();
+          if (r.bottom > -200 && r.top < window.innerHeight + 200) {
+            const rel = r.top + r.height / 2 - window.innerHeight / 2;
+            el.style.transform = 'translate3d(0,' + (rel * parseFloat(el.dataset.parallax)).toFixed(2) + 'px,0)';
+          }
+        });
+        if (nav) {
+          if (y > lastY + 4 && y > 220) nav.style.transform = 'translateY(-110%)';
+          if (y < lastY - 4) nav.style.transform = 'translateY(0)';
+          if (y > 80) {
+            nav.style.background = 'rgba(10,21,32,.72)';
+            nav.style.backdropFilter = 'blur(14px)';
+            nav.style.padding = '14px clamp(20px,4vw,56px)';
+          } else {
+            nav.style.background = 'transparent';
+            nav.style.backdropFilter = 'none';
+            nav.style.padding = '22px clamp(20px,4vw,56px)';
+          }
+          if (Math.abs(y - lastY) > 4) lastY = y;
+        }
+      };
+      window.addEventListener('scroll', this._onScroll, { passive: true });
+      window.addEventListener('resize', this._onScroll);
+      this._onScroll();
+    }
+  }
+
+  componentWillUnmount() {
+    clearInterval(this._cursorIv);
+    if (this._io) this._io.disconnect();
+    window.removeEventListener('hashchange', this._hash);
+    window.removeEventListener('scroll', this._onScroll);
+    window.removeEventListener('resize', this._onScroll);
+    window.removeEventListener('mousemove', this._move);
+  }
+
+  renderVals() { return {}; }
+}
+
+</script>
+</body>
+</html>

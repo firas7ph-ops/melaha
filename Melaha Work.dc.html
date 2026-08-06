@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>أعمالنا — ملاحة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+@font-face{font-family:'Wathiq Thuluth';src:url('assets/fonts/WathiqThuluth-Regular.otf') format('opentype');font-weight:400;font-display:swap}
+@font-face{font-family:'Wathiq Thuluth';src:url('assets/fonts/WathiqThuluth-Bold.otf') format('opentype');font-weight:700;font-display:swap}
+@font-face{font-family:'Wathiq Thuluth';src:url('assets/fonts/WathiqThuluth-Black.otf') format('opentype');font-weight:900;font-display:swap}
+:root{--head:'Wathiq Thuluth','IBM Plex Sans Arabic',system-ui,sans-serif;--body:'IBM Plex Sans Arabic',system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#0A1520;color:#F2EDE4;font-family:var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{margin:0;font-family:var(--head);font-feature-settings:normal;font-variant-alternates:normal}
+h1{font-feature-settings:"salt" 1}
+a{color:inherit;text-decoration:none}
+a:hover{color:#93B8CE}
+::selection{background:#93B8CE;color:#0A1520}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+</style>
+</helmet>
+
+<div dir="rtl" style="background:#0A1520;position:relative;overflow:clip">
+
+  <div data-progress="" style="position:fixed;top:0;right:0;height:2px;width:0%;background:#93B8CE;z-index:120"></div>
+  
+  <header data-nav="" style="position:fixed;top:0;right:0;left:0;z-index:110;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px clamp(20px,4vw,56px);transition:transform .6s cubic-bezier(.16,1,.3,1),background .5s,padding .5s">
+    <a href="Melaha Site.dc.html" style="display:flex;align-items:center;gap:10px">
+      <img src="https://melaha.co/images/melaha-logo.svg" alt="ملاحة" style="height:26px;filter:brightness(0) invert(1)" />
+    </a>
+    <nav style="display:flex;align-items:center;gap:clamp(12px,2vw,32px);font-size:14px">
+      <a href="Melaha Site.dc.html" style="opacity:.7;transition:opacity .3s" style-hover="opacity:1">الرئيسية</a>
+      <a href="Melaha Site.dc.html#services" style="opacity:.7;transition:opacity .3s" style-hover="opacity:1">خدماتنا</a>
+      <a href="Melaha Site.dc.html#process" style="opacity:.7;transition:opacity .3s" style-hover="opacity:1">آلية عملنا</a>
+      <a href="#gallery" style="opacity:1;color:#93B8CE">أعمالنا</a>
+      <a href="Melaha Site.dc.html#about" style="opacity:.7;transition:opacity .3s" style-hover="opacity:1">من نحن</a>
+    </nav>
+    <a href="Melaha Contact.dc.html" data-magnet="" style="display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border:1px solid rgba(242,237,228,.25);border-radius:100px;font-size:14px;font-weight:500;transition:background .4s,color .4s,border-color .4s" style-hover="background:#F2EDE4;color:#0A1520;border-color:#F2EDE4">أبحر معنا <span>←</span></a>
+  </header>
+
+  <section data-screen-label="Work hero" style="position:relative;padding:clamp(140px,17vw,230px) clamp(20px,4vw,56px) clamp(56px,7vw,90px);overflow:hidden">
+    <div style="position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:clamp(20px,3vw,30px)">
+      <div data-reveal="" style="display:flex;align-items:center;gap:12px;font-size:12px;color:#93B8CE">
+        <span style="width:7px;height:7px;border-radius:50%;background:#93B8CE;display:inline-block"></span>
+        المعرض ٢٠٢٤ — ٢٠٢٦
+      </div>
+      <h1 data-split="" style="font-size:clamp(40px,7.4vw,124px);font-weight:900;line-height:1.04;max-width:15ch">أعمالنا في ملاحة</h1>
+      <p data-reveal="" style="max-width:56ch;font-size:clamp(15px,1.25vw,19px);line-height:1.8;color:rgba(242,237,228,.72);margin:0">حملات وهويات وأفكار صنعناها مع شركاء يؤمنون بقوة الرسالة، ويعرفون أن كل فكرة تستحق أن تُروى بإتقان.</p>
+      <div data-reveal="" style="display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,64px);margin-top:clamp(14px,2vw,26px);padding-top:clamp(22px,3vw,34px);border-top:1px solid rgba(242,237,228,.14);width:100%">
+        <div><div style="font-family:var(--head);font-weight:900;font-size:clamp(30px,3.6vw,54px);line-height:1;color:#93B8CE">٠٩</div><div style="font-size:13px;color:rgba(242,237,228,.55);margin-top:8px">مشاريع منشورة</div></div>
+        <div><div style="font-family:var(--head);font-weight:900;font-size:clamp(30px,3.6vw,54px);line-height:1;color:#93B8CE">٠٦</div><div style="font-size:13px;color:rgba(242,237,228,.55);margin-top:8px">علامات شريكة</div></div>
+        <div><div style="font-family:var(--head);font-weight:900;font-size:clamp(30px,3.6vw,54px);line-height:1;color:#93B8CE">٠٢</div><div style="font-size:13px;color:rgba(242,237,228,.55);margin-top:8px">مجالات تخصص</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" data-screen-label="Gallery" style="padding:0 clamp(20px,4vw,56px) clamp(80px,11vw,150px)">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;position:sticky;top:0;z-index:60;padding:clamp(18px,2.4vw,26px) 0;background:linear-gradient(180deg,#0A1520 65%,rgba(10,21,32,0));margin-bottom:clamp(24px,3vw,38px)">
+      <div data-filters="" style="display:flex;flex-wrap:wrap;gap:10px">
+        <button type="button" data-filter="all" style="padding:11px 22px;border-radius:100px;border:1px solid #F2EDE4;background:#F2EDE4;color:#0A1520;font-family:var(--body);font-size:14px;font-weight:600;cursor:pointer;transition:background .4s,color .4s,border-color .4s">الكل</button>
+        <button type="button" data-filter="campaign" style="padding:11px 22px;border-radius:100px;border:1px solid rgba(242,237,228,.25);background:transparent;color:#F2EDE4;font-family:var(--body);font-size:14px;font-weight:500;cursor:pointer;transition:background .4s,color .4s,border-color .4s">الحملات التسويقية</button>
+        <button type="button" data-filter="video" style="padding:11px 22px;border-radius:100px;border:1px solid rgba(242,237,228,.25);background:transparent;color:#F2EDE4;font-family:var(--body);font-size:14px;font-weight:500;cursor:pointer;transition:background .4s,color .4s,border-color .4s">إنتاج فيديو</button>
+      </div>
+      <div data-tally="" style="font-size:13px;color:rgba(242,237,228,.5)">٩ مشاريع</div>
+    </div>
+
+    <div data-grid="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(16px,2vw,24px)">
+      <a href="Melaha Project.dc.html#ochikn-crispy" data-card="" data-cat="campaign" data-reveal="" style="position:relative;display:flex;flex-direction:column;border:1px solid rgba(242,237,228,.14);border-radius:20px;overflow:hidden;background:rgba(242,237,228,.03);transition:transform .6s cubic-bezier(.16,1,.3,1),border-color .6s">
+      <div style="position:relative;aspect-ratio:4/3;overflow:hidden;background:#1A2A38;flex:none">
+        <img data-img="" src="assets/ochikn-crispy-square.png" alt="الكريسبي عربي" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1)" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,21,32,.55),rgba(10,21,32,0) 55%)"></div>
+        <div style="position:absolute;top:14px;right:14px;padding:7px 14px;border-radius:100px;background:rgba(10,21,32,.55);backdrop-filter:blur(8px);font-size:12px;color:rgba(242,237,228,.9)">تطوير منتج + حملة</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;gap:10px;flex:1;padding:clamp(20px,2.2vw,30px)">
+        <div style="font-size:13px;color:rgba(242,237,228,.55)">أوشكن · ٢٠٢٥</div>
+        <h3 style="font-size:clamp(22px,2.3vw,34px);font-weight:700;line-height:1.2">الكريسبي عربي</h3>
+        <div style="font-size:13px;color:rgba(242,237,228,.5)">تطوير منتج + حملة</div>
+        <div style="margin-top:auto;padding-top:16px;display:flex;align-items:center;gap:8px;font-size:14px;color:#93B8CE">شاهد المشروع ↗</div>
+      </div>
+      </a>
+      <!-- hidden until visuals ready:
+<a href="Melaha Project.dc.html#ochikn-mistake" data-card="" data-cat="campaign" data-reveal="" style="position:relative;display:flex;flex-direction:column;border:1px solid rgba(242,237,228,.14);border-radius:20px;overflow:hidden;background:rgba(242,237,228,.03);transition:transform .6s cubic-bezier(.16,1,.3,1),border-color .6s">
+      <div style="position:relative;aspect-ratio:4/3;overflow:hidden;background:#1A2A38;flex:none;display:flex;align-items:center;justify-content:center">
+        <span data-img="" style="display:block;width:100%;height:100%;background:repeating-linear-gradient(135deg,rgba(242,237,228,.05) 0 14px,rgba(242,237,228,.02) 14px 28px);transition:transform 1.2s cubic-bezier(.16,1,.3,1)"></span>
+        <div style="position:absolute;top:14px;right:14px;padding:7px 14px;border-radius:100px;background:rgba(10,21,32,.55);backdrop-filter:blur(8px);font-size:12px;color:rgba(242,237,228,.9)">إطلاق منتج + حملة</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;gap:10px;flex:1;padding:clamp(20px,2.2vw,30px)">
+        <div style="font-size:13px;color:rgba(242,237,228,.55)">أوشكن · ٢٠٢٦</div>
+        <h3 style="font-size:clamp(22px,2.3vw,34px);font-weight:700;line-height:1.2">مو كل غلط غلط</h3>
+        <div style="font-size:13px;color:rgba(242,237,228,.5)">إطلاق منتج + حملة</div>
+        <div style="margin-top:auto;padding-top:16px;display:flex;align-items:center;gap:8px;font-size:14px;color:#93B8CE">شاهد المشروع ↗</div>
+      </div>
+      </a>
+-->
+      <!-- hidden until visuals ready:
+<a href="Melaha Project.dc.html#masnaf-mango" data-card="" data-cat="campaign" data-reveal="" style="position:relative;display:flex;flex-direction:column;border:1px solid rgba(242,237,228,.14);border-radius:20px;overflow:hidden;background:rgba(242,237,228,.03);transition:transform .6s cubic-bezier(.16,1,.3,1),border-color .6s">
+      <div style="position:relative;aspect-ratio:4/3;overflow:hidden;background:#1A2A38;flex:none;display:flex;align-items:center;justify-content:center">
+        <span data-img="" style="display:block;width:100%;height:100%;background:repeating-linear-gradient(135deg,rgba(242,237,228,.05) 0 14px,rgba(242,237,228,.02) 14px 28px);transition:transform 1.2s cubic-bezier(.16,1,.3,1)"></span>
+        <div style="position:absolute;top:14px;right:14px;padding:7px 14px;border-radius:100px;background:rgba(10,21,32,.55);backdrop-filter:blur(8px);font-size:12px;color:rgba(242,237,228,.9)">حملة موسمية متكاملة</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;gap:10px;flex:1;padding:clamp(20px,2.2vw,30px)">
+        <div style="font-size:13px;color:rgba(242,237,228,.55)">مصنف · ٢٠٢٦</div>
+        <h3 style="font-size:clamp(22px,2.3vw,34px);font-weight:700;line-height:1.2">موسم المانجو</h3>
+        <div style="font-size:13px;color:rgba(242,237,228,.5)">حملة موسمية متكاملة</div>
+        <div style="margin-top:auto;padding-top:16px;display:flex;align-items:center;gap:8px;font-size:14px;color:#93B8CE">شاهد المشروع ↗</div>
+      </div>
+      </a>
+-->
+      <a href="Melaha Project.dc.html#aryaf-mango" data-card="" data-cat="video" data-reveal="" style="position:relative;display:flex;flex-direction:column;border:1px solid rgba(242,237,228,.14);border-radius:20px;overflow:hidden;background:rgba(242,237,228,.03);transition:transform .6s cubic-bezier(.16,1,.3,1),border-color .6s">
+      <div style="position:relative;aspect-ratio:4/3;overflow:hidden;background:#1A2A38;flex:none">
+        <img data-img="" src="assets/aryaf-mango-cover.png" alt="خذها من مصدرها" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1)" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,21,32,.55),rgba(10,21,32,0) 55%)"></div>
+        <div style="position:absolute;top:14px;right:14px;padding:7px 14px;border-radius:100px;background:rgba(10,21,32,.55);backdrop-filter:blur(8px);font-size:12px;color:rgba(242,237,228,.9)">إنتاج فيديو</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;gap:10px;flex:1;padding:clamp(20px,2.2vw,30px)">
+        <div style="font-size:13px;color:rgba(242,237,228,.55)">مانجو أرياف جازان · ٢٠٢٦</div>
+        <h3 style="font-size:clamp(22px,2.3vw,34px);font-weight:700;line-height:1.2">خذها من مصدرها</h3>
+        <div style="font-size:13px;color:rgba(242,237,228,.5)">إنتاج فيديو</div>
+        <div style="margin-top:auto;padding-top:16px;display:flex;align-items:center;gap:8px;font-size:14px;color:#93B8CE">شاهد المشروع ↗</div>
+      </div>
+      </a>
+      <a href="Melaha Project.dc.html#jazan" data-card="" data-cat="campaign" data-wide="1" data-reveal="" style="grid-column:span 2;position:relative;display:flex;flex-direction:column;border:1px solid rgba(242,237,228,.14);border-radius:20px;overflow:hidden;background:rgba(242,237,228,.03);transition:transform .6s cubic-bezier(.16,1,.3,1),border-color .6s">
+      <div style="position:relative;aspect-ratio:16/10;overflow:hidden;background:#0C1E2C;flex:none">
+        <img data-img="" src="https://img.youtube.com/vi/9wax5oZwc28/maxresdefault.jpg" alt="نروي جازان في مائدة" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1);will-change:transform" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,21,32,.72),rgba(10,21,32,0) 62%)"></div>
+        <div style="position:absolute;top:14px;right:14px;padding:7px 14px;border-radius:100px;background:rgba(10,21,32,.55);backdrop-filter:blur(8px);font-size:12px;color:rgba(242,237,228,.9)">حملة إعلانية</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;gap:12px;flex:1;padding:clamp(20px,2.2vw,30px)">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:13px;color:rgba(242,237,228,.55)"><span>مصنف · مطعم</span><span>٢٠٢٥</span></div>
+        <h3 style="font-size:clamp(22px,3vw,42px);font-weight:700;line-height:1.2;">نروي جازان في مائدة</h3>
+        <p style="font-size:15px;line-height:1.75;color:rgba(242,237,228,.62);margin:0;max-width:52ch">دخول مصنف لسوق الرياض برسالة ثقافية جازانية. بحث تسويقي واستراتيجيات، ثم فيلم رئيسي و٣ إعلانات صور.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px"><span style="padding:6px 13px;border-radius:100px;border:1px solid rgba(147,184,206,.4);color:#93B8CE;font-size:12px">بحث ودراسة منافسين</span><span style="padding:6px 13px;border-radius:100px;border:1px solid rgba(147,184,206,.4);color:#93B8CE;font-size:12px">فيلم رئيسي</span></div>
+        <div style="margin-top:auto;padding-top:16px;display:flex;align-items:center;gap:8px;font-size:14px;color:#93B8CE">شاهد المشروع ↗</div>
+      </div>
+      </a>
+      <a href="Melaha Project.dc.html#masnaf-eid" data-card="" data-cat="video" data-reveal="" style="position:relative;display:flex;flex-direction:column;border:1px solid rgba(242,237,228,.14);border-radius:20px;overflow:hidden;background:rgba(242,237,228,.03);transition:transform .6s cubic-bezier(.16,1,.3,1),border-color .6s">
+      <div style="position:relative;aspect-ratio:16/10;overflow:hidden;background:#0C1E2C;flex:none">
+        <img data-img="" src="https://img.youtube.com/vi/q7gqmu6uD5k/maxresdefault.jpg" alt="فطور العيد في جازان" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1);will-change:transform" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,21,32,.72),rgba(10,21,32,0) 62%)"></div>
+        <div style="position:absolute;top:14px;right:14px;padding:7px 14px;border-radius:100px;background:rgba(10,21,32,.55);backdrop-filter:blur(8px);font-size:12px;color:rgba(242,237,228,.9)">إنتاج فيديو</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;gap:12px;flex:1;padding:clamp(20px,2.2vw,30px)">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:13px;color:rgba(242,237,228,.55)"><span>مصنف · مطعم</span><span>٢٠٢٥</span></div>
+        <h3 style="font-size:clamp(22px,2.3vw,34px);font-weight:700;line-height:1.2;">فطور العيد في جازان</h3>
+        <p style="font-size:15px;line-height:1.75;color:rgba(242,237,228,.62);margin:0;max-width:52ch">فيديو سردي يوثّق عادة الفطور الجماعي في أحياء جازان صباح العيد، بحالة شعورية دافئة.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px"><span style="padding:6px 13px;border-radius:100px;border:1px solid rgba(147,184,206,.4);color:#93B8CE;font-size:12px">+٧٤٣ ألف مشاهدة</span></div>
+        <div style="margin-top:auto;padding-top:16px;display:flex;align-items:center;gap:8px;font-size:14px;color:#93B8CE">شاهد المشروع ↗</div>
+      </div>
+      </a>
+      <a href="Melaha Project.dc.html#masnaf-fish" data-card="" data-cat="video" data-reveal="" style="position:relative;display:flex;flex-direction:column;border:1px solid rgba(242,237,228,.14);border-radius:20px;overflow:hidden;background:rgba(242,237,228,.03);transition:transform .6s cubic-bezier(.16,1,.3,1),border-color .6s">
+      <div style="position:relative;aspect-ratio:16/10;overflow:hidden;background:#0C1E2C;flex:none">
+        <img data-img="" src="https://img.youtube.com/vi/Xj-yP8CU0Cs/maxresdefault.jpg" alt="ليش نفطر سمك؟" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1);will-change:transform" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,21,32,.72),rgba(10,21,32,0) 62%)"></div>
+        <div style="position:absolute;top:14px;right:14px;padding:7px 14px;border-radius:100px;background:rgba(10,21,32,.55);backdrop-filter:blur(8px);font-size:12px;color:rgba(242,237,228,.9)">إنتاج فيديو</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;gap:12px;flex:1;padding:clamp(20px,2.2vw,30px)">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:13px;color:rgba(242,237,228,.55)"><span>مصنف · مطعم</span><span>٢٠٢٥</span></div>
+        <h3 style="font-size:clamp(22px,2.3vw,34px);font-weight:700;line-height:1.2;">ليش نفطر سمك؟</h3>
+        <p style="font-size:15px;line-height:1.75;color:rgba(242,237,228,.62);margin:0;max-width:52ch">فيديو ضمن حملة «الخير في أصله» بالرياض، يواجه السؤال مباشرة ويربطه بأصل الإرث الشعبي.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px"><span style="padding:6px 13px;border-radius:100px;border:1px solid rgba(147,184,206,.4);color:#93B8CE;font-size:12px">توثيقي · سردي</span></div>
+        <div style="margin-top:auto;padding-top:16px;display:flex;align-items:center;gap:8px;font-size:14px;color:#93B8CE">شاهد المشروع ↗</div>
+      </div>
+      </a>
+      <a href="Melaha Project.dc.html#harafiyeen" data-card="" data-cat="video" data-reveal="" style="position:relative;display:flex;flex-direction:column;border:1px solid rgba(242,237,228,.14);border-radius:20px;overflow:hidden;background:rgba(242,237,228,.03);transition:transform .6s cubic-bezier(.16,1,.3,1),border-color .6s">
+      <div style="position:relative;aspect-ratio:16/10;overflow:hidden;background:#0C1E2C;flex:none">
+        <img data-img="" src="https://img.youtube.com/vi/0jwEdZ6QNfE/maxresdefault.jpg" alt="أصل الحرفة" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1);will-change:transform" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,21,32,.72),rgba(10,21,32,0) 62%)"></div>
+        <div style="position:absolute;top:14px;right:14px;padding:7px 14px;border-radius:100px;background:rgba(10,21,32,.55);backdrop-filter:blur(8px);font-size:12px;color:rgba(242,237,228,.9)">إنتاج فيديو</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;gap:12px;flex:1;padding:clamp(20px,2.2vw,30px)">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:13px;color:rgba(242,237,228,.55)"><span>بيت الحرفيين</span><span>٢٠٢٥</span></div>
+        <h3 style="font-size:clamp(22px,2.3vw,34px);font-weight:700;line-height:1.2;">أصل الحرفة</h3>
+        <p style="font-size:15px;line-height:1.75;color:rgba(242,237,228,.62);margin:0;max-width:52ch">فيلم يربط جذور الحرفة بحاضرها. ملاحة مسكت الفكرة والسيناريو والإنتاج كاملاً.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px"><span style="padding:6px 13px;border-radius:100px;border:1px solid rgba(147,184,206,.4);color:#93B8CE;font-size:12px">سردي · إرثي</span></div>
+        <div style="margin-top:auto;padding-top:16px;display:flex;align-items:center;gap:8px;font-size:14px;color:#93B8CE">شاهد المشروع ↗</div>
+      </div>
+      </a>
+      <a href="Melaha Project.dc.html#roban" data-card="" data-cat="campaign" data-reveal="" style="position:relative;display:flex;flex-direction:column;border:1px solid rgba(242,237,228,.14);border-radius:20px;overflow:hidden;background:rgba(242,237,228,.03);transition:transform .6s cubic-bezier(.16,1,.3,1),border-color .6s">
+      <div style="position:relative;aspect-ratio:16/10;overflow:hidden;background:#0C1E2C;flex:none">
+        <img data-img="" src="https://melaha.co/images/roban-cover.png" alt="الربّان يفهمك" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1);will-change:transform" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,21,32,.72),rgba(10,21,32,0) 62%)"></div>
+        <div style="position:absolute;top:14px;right:14px;padding:7px 14px;border-radius:100px;background:rgba(10,21,32,.55);backdrop-filter:blur(8px);font-size:12px;color:rgba(242,237,228,.9)">حملة إعلانية</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;gap:12px;flex:1;padding:clamp(20px,2.2vw,30px)">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:13px;color:rgba(242,237,228,.55)"><span>الربّان · مطعم</span><span>٢٠٢٥</span></div>
+        <h3 style="font-size:clamp(22px,2.3vw,34px);font-weight:700;line-height:1.2;">الربّان يفهمك</h3>
+        <p style="font-size:15px;line-height:1.75;color:rgba(242,237,228,.62);margin:0;max-width:52ch">كيف نوصل تحسين المنتج بدون التصريح بالسعر؟ حملة بنيناها على انطباع العملاء نفسه.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px"><span style="padding:6px 13px;border-radius:100px;border:1px solid rgba(147,184,206,.4);color:#93B8CE;font-size:12px">٦٧١٧٠٠ انطباع</span><span style="padding:6px 13px;border-radius:100px;border:1px solid rgba(147,184,206,.4);color:#93B8CE;font-size:12px">+٣٤٪ تجاوز للمستهدف</span></div>
+        <div style="margin-top:auto;padding-top:16px;display:flex;align-items:center;gap:8px;font-size:14px;color:#93B8CE">شاهد المشروع ↗</div>
+      </div>
+      </a>
+      <a href="Melaha Project.dc.html#fournya" data-card="" data-cat="campaign" data-reveal="" style="position:relative;display:flex;flex-direction:column;border:1px solid rgba(242,237,228,.14);border-radius:20px;overflow:hidden;background:rgba(242,237,228,.03);transition:transform .6s cubic-bezier(.16,1,.3,1),border-color .6s">
+      <div style="position:relative;aspect-ratio:16/10;overflow:hidden;background:#0C1E2C;flex:none">
+        <img data-img="" src="https://melaha.co/images/fournya-1.png" alt="بفطورك تزين أمورك" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1);will-change:transform" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,21,32,.72),rgba(10,21,32,0) 62%)"></div>
+        <div style="position:absolute;top:14px;right:14px;padding:7px 14px;border-radius:100px;background:rgba(10,21,32,.55);backdrop-filter:blur(8px);font-size:12px;color:rgba(242,237,228,.9)">حملة إعلانية</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;gap:12px;flex:1;padding:clamp(20px,2.2vw,30px)">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:13px;color:rgba(242,237,228,.55)"><span>فرنية · مطعم</span><span>٢٠٢٥</span></div>
+        <h3 style="font-size:clamp(22px,2.3vw,34px);font-weight:700;line-height:1.2;">بفطورك تزين أمورك</h3>
+        <p style="font-size:15px;line-height:1.75;color:rgba(242,237,228,.62);margin:0;max-width:52ch">بحث سوق وتحليل سلوك الجمهور الصباحي، انتهى بمنتج «وجبة الفطور» بـ١٩ ريال وسلوغن الحملة.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px"><span style="padding:6px 13px;border-radius:100px;border:1px solid rgba(147,184,206,.4);color:#93B8CE;font-size:12px">فيديو + ٣ إعلانات</span><span style="padding:6px 13px;border-radius:100px;border:1px solid rgba(147,184,206,.4);color:#93B8CE;font-size:12px">ارتفاع ملحوظ بالمبيعات</span></div>
+        <div style="margin-top:auto;padding-top:16px;display:flex;align-items:center;gap:8px;font-size:14px;color:#93B8CE">شاهد المشروع ↗</div>
+      </div>
+      </a>
+      <a href="Melaha Project.dc.html#ochikn" data-card="" data-cat="campaign" data-wide="1" data-reveal="" style="grid-column:span 2;position:relative;display:flex;flex-direction:column;border:1px solid rgba(242,237,228,.14);border-radius:20px;overflow:hidden;background:rgba(242,237,228,.03);transition:transform .6s cubic-bezier(.16,1,.3,1),border-color .6s">
+      <div style="position:relative;aspect-ratio:16/10;overflow:hidden;background:#0C1E2C;flex:none">
+        <img data-img="" src="https://melaha.co/images/ochikn-cover.png" alt="أوشكن يوصّل للجامعة" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1);will-change:transform" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,21,32,.72),rgba(10,21,32,0) 62%)"></div>
+        <div style="position:absolute;top:14px;right:14px;padding:7px 14px;border-radius:100px;background:rgba(10,21,32,.55);backdrop-filter:blur(8px);font-size:12px;color:rgba(242,237,228,.9)">حملة إعلانية</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;gap:12px;flex:1;padding:clamp(20px,2.2vw,30px)">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:13px;color:rgba(242,237,228,.55)"><span>أوشكن · مطعم</span><span>٢٠٢٤</span></div>
+        <h3 style="font-size:clamp(22px,3vw,42px);font-weight:700;line-height:1.2;">أوشكن يوصّل للجامعة</h3>
+        <p style="font-size:15px;line-height:1.75;color:rgba(242,237,228,.62);margin:0;max-width:52ch">حملة عودة الدراسة: استهداف دقيق حول الجامعات في أوقات الدوام، وثلاث استراتيجيات ترويج بالتوازي.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px"><span style="padding:6px 13px;border-radius:100px;border:1px solid rgba(147,184,206,.4);color:#93B8CE;font-size:12px">تسويق بالمحتوى</span><span style="padding:6px 13px;border-radius:100px;border:1px solid rgba(147,184,206,.4);color:#93B8CE;font-size:12px">إعلانات مدفوعة</span><span style="padding:6px 13px;border-radius:100px;border:1px solid rgba(147,184,206,.4);color:#93B8CE;font-size:12px">مشاهير</span></div>
+        <div style="margin-top:auto;padding-top:16px;display:flex;align-items:center;gap:8px;font-size:14px;color:#93B8CE">شاهد المشروع ↗</div>
+      </div>
+      </a>
+    </div>
+  </section>
+
+  <section data-screen-label="Partners" style="padding:clamp(44px,6vw,72px) 0;border-top:1px solid rgba(242,237,228,.1);border-bottom:1px solid rgba(242,237,228,.1);overflow:hidden">
+    <div data-reveal="" style="text-align:center;font-size:12px;color:rgba(242,237,228,.45);margin-bottom:clamp(26px,4vw,42px)">شركاء أبحروا معنا</div>
+    <div dir="ltr" style="display:flex;width:200%;animation:mq 32s linear infinite">
+      <div style="display:flex;align-items:center;gap:clamp(60px,8vw,130px);width:50%;flex:none;padding-left:clamp(60px,8vw,130px)">
+        <img src="https://melaha.co/images/clients/sah.png" alt="Sah" style="height:92px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)" />
+        <img src="https://melaha.co/images/clients/farniya.png" alt="فرنية" style="height:92px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)" />
+        <img src="https://melaha.co/images/clients/aljebran.png" alt="العم جبران" style="height:104px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)" />
+        <img src="https://melaha.co/images/clients/masnaf.png" alt="Masnaf" style="height:86px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)" />
+        <img src="https://melaha.co/images/clients/roban.png" alt="Roban" style="height:98px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)" />
+        <img src="https://melaha.co/images/clients/ochikn.png" alt="O'CHIKN" style="height:92px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)" />
+        <img src="https://melaha.co/images/clients/artisans.png" alt="بيت الحرفيين" style="height:104px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)" />
+      </div>
+      <div style="display:flex;align-items:center;gap:clamp(60px,8vw,130px);width:50%;flex:none;padding-left:clamp(60px,8vw,130px)">
+        <img src="https://melaha.co/images/clients/sah.png" alt="" style="height:92px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)" />
+        <img src="https://melaha.co/images/clients/farniya.png" alt="" style="height:92px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)" />
+        <img src="https://melaha.co/images/clients/aljebran.png" alt="" style="height:104px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)" />
+        <img src="https://melaha.co/images/clients/masnaf.png" alt="" style="height:86px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)" />
+        <img src="https://melaha.co/images/clients/roban.png" alt="" style="height:98px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)" />
+        <img src="https://melaha.co/images/clients/ochikn.png" alt="" style="height:92px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)" />
+        <img src="https://melaha.co/images/clients/artisans.png" alt="" style="height:104px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)" />
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="CTA" style="position:relative;padding:clamp(90px,13vw,180px) clamp(20px,4vw,56px);overflow:hidden">
+    <div style="position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:clamp(20px,3vw,30px)">
+      <div data-reveal="" style="font-size:12px;color:#93B8CE">مشروعك التالي</div>
+      <h2 data-split="" style="font-size:clamp(30px,6vw,102px);font-weight:900;line-height:1.06;max-width:17ch">خلّ قصتك الجاية تكون معانا.</h2>
+      <p data-reveal="" style="max-width:48ch;font-size:clamp(15px,1.2vw,19px);line-height:1.8;color:rgba(242,237,228,.7);margin:0">فريق ملاحة جاهز يبحر بأعمالك لآفاق تحقق أهدافك بكل احترافية.</p>
+      <div data-reveal="" style="display:flex;flex-wrap:wrap;gap:12px">
+        <a href="Melaha Contact.dc.html" data-magnet="" style="display:inline-flex;align-items:center;gap:12px;padding:18px 36px;border-radius:100px;background:#F2EDE4;color:#0A1520;font-weight:600;font-size:16px;transition:transform .4s cubic-bezier(.16,1,.3,1),background .4s" style-hover="background:#93B8CE;transform:translateY(-3px)">أبحر معنا <span>←</span></a>
+        <a href="Melaha Site.dc.html#services" data-magnet="" style="display:inline-flex;align-items:center;gap:10px;padding:18px 34px;border-radius:100px;border:1px solid rgba(242,237,228,.28);font-size:16px;transition:background .4s" style-hover="background:rgba(242,237,228,.1)">اطّلع على خدماتنا</a>
+      </div>
+    </div>
+  </section>
+
+  <footer data-screen-label="Footer" style="padding:clamp(50px,6vw,80px) clamp(20px,4vw,56px) 32px;border-top:1px solid rgba(242,237,228,.12)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:clamp(28px,4vw,56px);margin-bottom:clamp(40px,6vw,72px)">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <img src="https://melaha.co/images/melaha-logo.svg" alt="ملاحة" style="height:28px;width:auto;align-self:flex-start;filter:brightness(0) invert(1)" />
+        <p style="font-size:14px;line-height:1.8;color:rgba(242,237,228,.5);max-width:30ch;margin:0">الشريك الإبداعي للعلامات الطموحة.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <h4 style="font-size:13px;font-weight:700;color:rgba(242,237,228,.45)">استكشف</h4>
+        <a href="Melaha Site.dc.html" style="font-size:15px;color:rgba(242,237,228,.75)">الرئيسية</a>
+        <a href="Melaha Site.dc.html#services" style="font-size:15px;color:rgba(242,237,228,.75)">خدماتنا</a>
+        <a href="Melaha Site.dc.html#process" style="font-size:15px;color:rgba(242,237,228,.75)">آلية عملنا</a>
+        <a href="#gallery" style="font-size:15px;color:rgba(242,237,228,.75)">أعمالنا</a>
+        <a href="Melaha Site.dc.html#about" style="font-size:15px;color:rgba(242,237,228,.75)">من نحن</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <h4 style="font-size:13px;font-weight:700;color:rgba(242,237,228,.45)">تواصل</h4>
+        <a href="mailto:info@melaha.co" style="font-size:15px;color:rgba(242,237,228,.75)">info@melaha.co</a>
+        <a href="tel:+966538811710" dir="ltr" style="font-size:15px;color:rgba(242,237,228,.75)">053 881 1710</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <h4 style="font-size:13px;font-weight:700;color:rgba(242,237,228,.45)">تابعنا</h4>
+        <a href="https://x.com/melaha_sa" target="_blank" rel="noopener" aria-label="X" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1px solid rgba(242,237,228,.22);color:inherit"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.2l-7 8 7.3 9.9h-5.6l-4.4-5.9-5 5.9H2.8l7.3-8.5L3.1 3h5.7l4.1 5.5L17.5 3Zm-1.1 15.9h1.8L7.6 4.9H5.7l10.7 14Z"/></svg></a>
+        <a href="https://www.instagram.com/melaha.sa/" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1px solid rgba(242,237,228,.22);color:inherit"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2.2c-2.7 0-3 0-4 .06-1.1.05-1.8.2-2.5.5a4.9 4.9 0 0 0-1.8 1.2 4.9 4.9 0 0 0-1.2 1.8c-.3.6-.45 1.4-.5 2.5C2 9.3 2 9.6 2 12s0 2.7.06 3.7c.05 1.1.2 1.8.5 2.5a4.9 4.9 0 0 0 1.2 1.8 4.9 4.9 0 0 0 1.8 1.2c.6.3 1.4.45 2.5.5 1 .06 1.3.06 4 .06s2.7 0 3.7-.06c1.1-.05 1.8-.2 2.5-.5a5 5 0 0 0 2.9-2.9c.3-.6.45-1.4.5-2.5.06-1 .06-1.3.06-3.7s0-2.7-.06-3.7c-.05-1.1-.2-1.8-.5-2.5a4.9 4.9 0 0 0-1.2-1.8 4.9 4.9 0 0 0-1.8-1.2c-.6-.3-1.4-.45-2.5-.5C14.7 2.2 14.4 2.2 12 2.2Zm0 1.8c2.7 0 3 0 4 .05.9.04 1.4.2 1.7.32.4.17.7.37 1 .68.3.3.5.6.68 1 .13.34.28.83.32 1.72.05 1 .05 1.3.05 3.6s0 2.6-.05 3.6c-.04.9-.2 1.4-.32 1.72-.17.4-.37.7-.68 1-.3.3-.6.5-1 .68-.34.13-.83.28-1.72.32-1 .05-1.3.05-3.6.05s-2.6 0-3.6-.05c-.9-.04-1.4-.2-1.72-.32-.4-.17-.7-.37-1-.68-.3-.3-.5-.6-.68-1-.13-.34-.28-.83-.32-1.72-.05-1-.05-1.3-.05-3.6s0-2.6.05-3.6c.04-.9.2-1.4.32-1.72.17-.4.37-.7.68-1 .3-.3.6-.5 1-.68.34-.13.83-.28 1.72-.32 1-.05 1.3-.05 3.6-.05Zm0 3.06a4.94 4.94 0 1 0 0 9.88 4.94 4.94 0 0 0 0-9.88Zm0 8.14a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4Zm6.3-8.34a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0Z"/></svg></a>
+        <a href="https://www.tiktok.com/@melaha.sa" target="_blank" rel="noopener" aria-label="TikTok" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1px solid rgba(242,237,228,.22);color:inherit"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M16.6 2h-3v13.1a2.6 2.6 0 1 1-2.6-2.6c.27 0 .53.04.78.12V9.5a5.7 5.7 0 0 0-.78-.05 5.7 5.7 0 1 0 5.7 5.7V8.4c1 .8 2.3 1.3 3.7 1.35V6.6a3.9 3.9 0 0 1-3.8-3.8V2Z"/></svg></a>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:26px;border-top:1px solid rgba(242,237,228,.1);font-size:13px;color:rgba(242,237,228,.42)">
+      <span>© 2026 — وكالة ملاحة. جميع الحقوق محفوظة.</span>
+      <span>الرياض، المملكة العربية السعودية</span>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const EASE = 'cubic-bezier(.16,1,.3,1)';
+    const AR = ['٠','١','٢','٣','٤','٥','٦','٧','٨','٩'];
+    const ar = n => String(n).split('').map(d => AR[+d]).join('');
+
+    document.querySelectorAll('[data-split]').forEach(h => {
+      const words = (h.textContent || '').trim().split(/\s+/);
+      h.textContent = '';
+      words.forEach((w, i) => {
+        const mask = document.createElement('span');
+        mask.style.cssText = 'display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-bottom:-.12em';
+        const inner = document.createElement('span');
+        inner.textContent = w;
+        inner.style.cssText = 'display:inline-block;transform:translateY(108%);transition:transform 1s ' + EASE + ' ' + (i * 65) + 'ms';
+        mask.appendChild(inner);
+        h.appendChild(mask);
+        if (i < words.length - 1) h.appendChild(document.createTextNode(' '));
+      });
+    });
+
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(26px)';
+      el.style.transition = 'opacity .9s ' + EASE + ',transform .9s ' + EASE;
+    });
+
+    const show = el => {
+      if (el.dataset.shown) return;
+      el.dataset.shown = '1';
+      if (el.hasAttribute('data-split')) {
+        el.querySelectorAll('span > span').forEach(s => { s.style.transform = 'translateY(0)'; });
+      } else {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      }
+    };
+    const io = new IntersectionObserver(es => {
+      es.forEach(e => { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('[data-split],[data-reveal]').forEach(el => io.observe(el));
+    setTimeout(() => document.querySelectorAll('[data-split],[data-reveal]').forEach(show), 3600);
+
+    // card hover
+    document.querySelectorAll('[data-card]').forEach(card => {
+      const im = card.querySelector('[data-img]');
+      card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-8px)';
+        card.style.borderColor = 'rgba(147,184,206,.55)';
+        if (im) im.style.transform = 'scale(1.07)';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'none';
+        card.style.borderColor = 'rgba(242,237,228,.14)';
+        if (im) im.style.transform = 'none';
+      });
+    });
+
+    // filters
+    const cards = Array.from(document.querySelectorAll('[data-card]'));
+    const tally = document.querySelector('[data-tally]');
+    const btns = Array.from(document.querySelectorAll('[data-filter]'));
+    const setActive = b => btns.forEach(x => {
+      const on = x === b;
+      x.style.background = on ? '#F2EDE4' : 'transparent';
+      x.style.color = on ? '#0A1520' : '#F2EDE4';
+      x.style.borderColor = on ? '#F2EDE4' : 'rgba(242,237,228,.25)';
+      x.style.fontWeight = on ? '600' : '500';
+    });
+    btns.forEach(b => {
+      b.addEventListener('click', () => {
+        const cat = b.dataset.filter;
+        setActive(b);
+        let n = 0;
+        cards.forEach((c, i) => {
+          const match = cat === 'all' || c.dataset.cat === cat;
+          if (match) n++;
+          c.style.transition = 'opacity .45s ' + EASE + ',transform .55s ' + EASE;
+          if (match) {
+            c.style.display = 'flex';
+            c.style.opacity = '0';
+            c.style.transform = 'translateY(18px) scale(.985)';
+            setTimeout(() => { c.style.opacity = '1'; c.style.transform = 'none'; }, 30 + i * 45);
+          } else {
+            c.style.opacity = '0';
+            c.style.transform = 'translateY(10px) scale(.985)';
+            setTimeout(() => { c.style.display = 'none'; }, 300);
+          }
+        });
+        if (tally) tally.textContent = ar(n) + ' مشاريع';
+      });
+    });
+
+    // cursor
+    const cur = document.querySelector('[data-cursor]');
+    let cx = 0, cy = 0, tx = 0, ty = 0;
+    this._move = e => { tx = e.clientX; ty = e.clientY; if (cur) cur.style.opacity = '1'; };
+    window.addEventListener('mousemove', this._move, { passive: true });
+    document.querySelectorAll('[data-magnet],[data-card],[data-filter]').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        if (!cur) return;
+        cur.style.width = '48px'; cur.style.height = '48px';
+        cur.style.background = 'rgba(147,184,206,.18)';
+      });
+      el.addEventListener('mouseleave', () => {
+        if (!cur) return;
+        cur.style.width = '12px'; cur.style.height = '12px';
+        cur.style.background = 'rgba(147,184,206,.35)';
+      });
+    });
+    this._cursorIv = setInterval(() => {
+      cx += (tx - cx) * 0.2; cy += (ty - cy) * 0.2;
+      if (cur) cur.style.transform = 'translate(' + cx.toFixed(1) + 'px,' + cy.toFixed(1) + 'px) translate(-50%,-50%)';
+    }, 16);
+
+    // scroll
+    // grid columns: 3-up / 2-up / 1-up, span-2 only when >=2 tracks
+    const grid = document.querySelector('[data-grid]');
+    const layout = () => {
+      if (!grid) return;
+      const w = grid.clientWidth;
+      const cols = w >= 1000 ? 3 : w >= 640 ? 2 : 1;
+      grid.style.gridTemplateColumns = 'repeat(' + cols + ',minmax(0,1fr))';
+      cards.forEach(c => {
+        const wide = c.dataset.wide === '1';
+        c.style.gridColumn = wide && cols > 1 ? 'span 2' : 'auto';
+      });
+    };
+    this._layout = layout;
+    window.addEventListener('resize', layout);
+    layout();
+
+    const nav = document.querySelector('[data-nav]');
+    const bar = document.querySelector('[data-progress]');
+    const px = Array.from(document.querySelectorAll('[data-parallax]'));
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      if (bar) bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      px.forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (r.bottom > -200 && r.top < window.innerHeight + 200) {
+          const rel = r.top + r.height / 2 - window.innerHeight / 2;
+          el.style.transform = 'translate3d(0,' + (rel * parseFloat(el.dataset.parallax)).toFixed(2) + 'px,0)';
+        }
+      });
+      if (nav) {
+        if (y > lastY + 4 && y > 220) nav.style.transform = 'translateY(-110%)';
+        if (y < lastY - 4) nav.style.transform = 'translateY(0)';
+        if (y > 80) {
+          nav.style.background = 'rgba(10,21,32,.72)';
+          nav.style.backdropFilter = 'blur(14px)';
+          nav.style.padding = '14px clamp(20px,4vw,56px)';
+        } else {
+          nav.style.background = 'transparent';
+          nav.style.backdropFilter = 'none';
+          nav.style.padding = '22px clamp(20px,4vw,56px)';
+        }
+        if (Math.abs(y - lastY) > 4) lastY = y;
+      }
+    };
+    this._onScroll = onScroll;
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    onScroll();
+  }
+
+  componentWillUnmount() {
+    clearInterval(this._cursorIv);
+    window.removeEventListener('scroll', this._onScroll);
+    window.removeEventListener('resize', this._onScroll);
+    window.removeEventListener('resize', this._layout);
+    window.removeEventListener('mousemove', this._move);
+  }
+
+  renderVals() { return {}; }
+}
+
+</script>
+</body>
+</html>

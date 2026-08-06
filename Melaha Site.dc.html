@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ملاحة — وكالة إبداعية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Wathiq Thuluth';src:url('assets/fonts/WathiqThuluth-Regular.otf') format('opentype');font-weight:400;font-display:swap}
+@font-face{font-family:'Wathiq Thuluth';src:url('assets/fonts/WathiqThuluth-Bold.otf') format('opentype');font-weight:700;font-display:swap}
+@font-face{font-family:'Wathiq Thuluth';src:url('assets/fonts/WathiqThuluth-Black.otf') format('opentype');font-weight:900;font-display:swap}
+:root{--head:'Wathiq Thuluth','IBM Plex Sans Arabic',system-ui,sans-serif;--body:'IBM Plex Sans Arabic',system-ui,sans-serif;--acc:#93B8CE}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#0A1520;color:#F2EDE4;font-family:var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{margin:0;font-family:var(--head);font-feature-settings:normal;font-variant-alternates:normal}
+h1{font-feature-settings:"salt" 1}
+a{color:inherit;text-decoration:none}
+a:hover{color:#93B8CE}
+::selection{background:#F2EDE4;color:#0A1520}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes mq2{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+</style>
+</helmet>
+
+<div dir="rtl" style="background:#0A1520;position:relative;overflow:clip">
+
+  <div data-preloader="" style="position:fixed;inset:0;z-index:200;background:#0A1520;display:flex;align-items:flex-end;justify-content:space-between;padding:clamp(24px,4vw,56px);transition:transform 1.05s cubic-bezier(.76,0,.24,1)">
+    <img src="https://melaha.co/images/melaha-logo.svg" alt="ملاحة" style="width:clamp(180px,32vw,460px);height:auto;filter:brightness(0) invert(1)">
+    <div data-count="" style="font-family:var(--head);font-weight:400;font-size:clamp(26px,5vw,60px);color:#93B8CE">٠</div>
+  </div>
+
+  <div data-progress="" style="position:fixed;top:0;right:0;height:2px;width:0%;background:#93B8CE;z-index:120"></div>
+  
+
+  <header data-nav="" style="position:fixed;top:0;right:0;left:0;z-index:110;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px clamp(20px,4vw,56px);transition:transform .6s cubic-bezier(.16,1,.3,1),background .5s,padding .5s">
+    <a href="#top" style="display:flex;align-items:center;gap:10px">
+      <img src="https://melaha.co/images/melaha-logo.svg" alt="ملاحة" style="height:26px;filter:brightness(0) invert(1)">
+    </a>
+    <nav style="display:flex;align-items:center;gap:clamp(12px,2vw,32px);font-size:14px">
+      <a href="#services" style="opacity:.7;transition:opacity .3s" style-hover="opacity:1">خدماتنا</a>
+      <a href="Melaha Work.dc.html" style="opacity:.7;transition:opacity .3s" style-hover="opacity:1">أعمالنا</a>
+      <a href="#about" style="opacity:.7;transition:opacity .3s" style-hover="opacity:1">من نحن</a>
+      <a href="#process" style="opacity:.7;transition:opacity .3s" style-hover="opacity:1">آلية عملنا</a>
+    </nav>
+    <a href="Melaha Contact.dc.html" data-magnet="" style="display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border:1px solid rgba(242,237,228,.25);border-radius:100px;font-size:14px;font-weight:500;transition:background .4s,color .4s,border-color .4s" style-hover="background:#F2EDE4;color:#0A1520;border-color:#93B8CE">أبحر معنا <span>←</span></a>
+  </header>
+
+  <section id="top" data-screen-label="Hero" style="position:relative;height:100svh;min-height:640px;overflow:hidden;display:flex;align-items:flex-end">
+    <div data-parallax="0.16" style="position:absolute;inset:-12% 0;z-index:0;will-change:transform">
+      <img src="assets/hero-portrait.png" alt="" style="width:100%;height:100%;object-fit:cover;object-position:32% 42%;filter:brightness(1.14) contrast(1.06) saturate(1.04)">
+    </div>
+    <div style="position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,21,32,.86) 0%,rgba(10,21,32,.34) 30%,rgba(10,21,32,0) 58%,rgba(10,21,32,.22) 100%)"></div>
+
+    <div style="position:relative;z-index:2;width:100%;padding:0 clamp(20px,4vw,56px) clamp(86px,10vh,120px);display:flex;flex-direction:column;align-items:flex-start;gap:clamp(20px,3vw,32px)">
+      <div data-reveal="" style="display:flex;align-items:center;gap:12px;font-size:13px;color:rgba(242,237,228,.72)">
+        <span style="width:7px;height:7px;border-radius:50%;background:#93B8CE;display:inline-block"></span>
+        الشريك الإبداعي للعلامات الطموحة
+      </div>
+      <h1 data-split="" style="font-size:clamp(44px,8vw,142px);font-weight:900;line-height:1;max-width:17ch;text-wrap:balance">نسوي محتوى يرتبط فيه جمهورك</h1>
+      <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px;width:100%">
+        <p data-reveal="" style="max-width:52ch;font-size:clamp(15px,1.25vw,19px);line-height:1.8;color:rgba(242,237,228,.74);margin:0">ملاحة هي الشريك الإبداعي اللي تساعدك على إيصال رسائلك بشكل مدروس، يبني التصوّر الصحيح ويحقق الهدف.</p>
+        <div data-reveal="" style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="Melaha Contact.dc.html" data-magnet="" style="display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:100px;background:#F2EDE4;color:#0A1520;font-weight:600;font-size:15px;transition:transform .4s cubic-bezier(.16,1,.3,1),background .4s" style-hover="background:#93B8CE;transform:translateY(-3px)">أبحر معنا <span>←</span></a>
+          <a href="Melaha Work.dc.html" data-magnet="" style="display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:100px;border:1px solid rgba(242,237,228,.28);font-weight:500;font-size:15px;transition:background .4s" style-hover="background:rgba(242,237,228,.1)">شاهد أعمالنا</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="position:absolute;bottom:0;right:0;left:0;z-index:2;overflow:hidden;border-top:1px solid rgba(242,237,228,.12);background:rgba(10,21,32,.42);backdrop-filter:blur(6px)">
+      
+    </div>
+  </section>
+
+  <section data-screen-label="Clients" style="padding:clamp(44px,6vw,72px) 0;border-bottom:1px solid rgba(242,237,228,.1);overflow:hidden">
+    <div data-reveal="" style="text-align:center;font-size:12px;color:rgba(242,237,228,.45);margin-bottom:clamp(26px,4vw,42px)">شركاء أبحروا معنا</div>
+    <div dir="ltr" style="display:flex;width:200%;animation:mq 32s linear infinite">
+      <div style="display:flex;align-items:center;gap:clamp(60px,8vw,130px);width:50%;flex:none;padding-left:clamp(60px,8vw,130px)">
+        <img src="https://melaha.co/images/clients/sah.png" alt="Sah" style="height:92px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)">
+        <img src="https://melaha.co/images/clients/farniya.png" alt="فرنية" style="height:92px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)">
+        <img src="https://melaha.co/images/clients/aljebran.png" alt="العم جبران" style="height:104px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)">
+        <img src="https://melaha.co/images/clients/masnaf.png" alt="Masnaf" style="height:86px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)">
+        <img src="https://melaha.co/images/clients/roban.png" alt="Roban" style="height:98px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)">
+        <img src="https://melaha.co/images/clients/ochikn.png" alt="O'CHIKN" style="height:92px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)">
+        <img src="https://melaha.co/images/clients/artisans.png" alt="بيت الحرفيين" style="height:104px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)">
+      </div>
+      <div style="display:flex;align-items:center;gap:clamp(60px,8vw,130px);width:50%;flex:none;padding-left:clamp(60px,8vw,130px)">
+        <img src="https://melaha.co/images/clients/sah.png" alt="" style="height:92px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)">
+        <img src="https://melaha.co/images/clients/farniya.png" alt="" style="height:92px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)">
+        <img src="https://melaha.co/images/clients/aljebran.png" alt="" style="height:104px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)">
+        <img src="https://melaha.co/images/clients/masnaf.png" alt="" style="height:86px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)">
+        <img src="https://melaha.co/images/clients/roban.png" alt="" style="height:98px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)">
+        <img src="https://melaha.co/images/clients/ochikn.png" alt="" style="height:92px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)">
+        <img src="https://melaha.co/images/clients/artisans.png" alt="" style="height:104px;object-fit:contain;opacity:.85;filter:brightness(0) invert(1)">
+      </div>
+    </div>
+  </section>
+
+  <section id="services" data-screen-label="Services" style="padding:clamp(80px,11vw,160px) clamp(20px,4vw,56px)">
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:clamp(46px,7vw,86px)">
+      <div style="max-width:22ch">
+        <div data-reveal="" style="font-size:12px;color:#93B8CE;margin-bottom:20px">خدماتنا</div>
+        <h2 data-split="" style="font-size: clamp(30px,4.6vw,74px); font-weight: 700; line-height: 1.08; width: 407px; height: 77px">إبداع يحقق الهدف</h2>
+      </div>
+      <p data-reveal="" style="max-width:46ch;font-size:clamp(15px,1.2vw,18px);line-height:1.8;color:rgba(242,237,228,.66);margin:0">ثلاث خدمات تشتغل ببعض، وتبني صورة كاملة لعلامتك التجارية. من الفكرة الأولى لين قياس الأثر.</p>
+    </div>
+
+    <div data-folders="" style="display:flex;flex-direction:column;margin-inline:calc(-1 * clamp(20px,4vw,56px))">
+      <a href="Melaha Service.dc.html#campaigns" data-folder="" data-i="0" style="position:relative;display:block;text-decoration:none;color:#0A1520;z-index:2;transition:transform .6s cubic-bezier(.16,1,.3,1);will-change:transform">
+        <div data-tabrow="" style="position:relative;display:flex;justify-content:flex-start;padding-inline:clamp(20px,7vw,150px)">
+          <div style="background:#F2EDE4;padding:clamp(12px,1.4vw,18px) clamp(30px,4vw,66px);font-size:clamp(14px,1.2vw,17px);font-weight:600;white-space:nowrap">حملات</div>
+        </div>
+        <div data-body="" style="position:relative;background:#F2EDE4;padding:clamp(26px,3.4vw,48px) clamp(20px,4vw,56px) clamp(30px,3.8vw,56px)">
+          <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:clamp(16px,2.4vw,40px)">
+            <div style="flex:1 1 340px;display:flex;flex-direction:column;gap:14px">
+              <div style="font-family:var(--head);font-weight:700;font-size:14px;opacity:.5">٠١ — خدمة</div>
+              <h3 style="font-size:clamp(24px,3.2vw,50px);font-weight:700;line-height:1.16;max-width:22ch">إدارة وتنفيذ الحملات التسويقية</h3>
+            </div>
+            <div data-open="" style="display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:100px;border:1px solid rgba(10,21,32,.28);font-size:15px;font-weight:600;white-space:nowrap;transition:background .45s,color .45s,border-color .45s">افتح الملف <span data-arrow="" style="display:inline-block;transition:transform .5s cubic-bezier(.16,1,.3,1)">↖</span></div>
+          </div>
+          <div data-details="" style="overflow:hidden;max-height:0;opacity:0;transition:max-height .6s cubic-bezier(.16,1,.3,1),opacity .5s cubic-bezier(.16,1,.3,1),margin-top .6s cubic-bezier(.16,1,.3,1)">
+            <p style="font-size:clamp(14px,1.15vw,17px);line-height:1.75;opacity:.72;margin:0;max-width:52ch">نخطط وننفذ حملات متكاملة تضمن وصولك للجمهور المناسب، وتحقيق نتائج ملموسة على الأرض.</p>
+          </div>
+        </div>
+      </a>
+      <a href="Melaha Service.dc.html#content" data-folder="" data-i="1" style="position:relative;display:block;text-decoration:none;color:#0A1520;z-index:3;transition:transform .6s cubic-bezier(.16,1,.3,1);will-change:transform">
+        <div data-tabrow="" style="position:relative;display:flex;justify-content:flex-end;padding-inline:clamp(20px,7vw,150px)">
+          <div style="background:#93B8CE;padding:clamp(12px,1.4vw,18px) clamp(30px,4vw,66px);font-size:clamp(14px,1.2vw,17px);font-weight:600;white-space:nowrap">محتوى</div>
+        </div>
+        <div data-body="" style="position:relative;background:#93B8CE;padding:clamp(26px,3.4vw,48px) clamp(20px,4vw,56px) clamp(30px,3.8vw,56px)">
+          <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:clamp(16px,2.4vw,40px)">
+            <div style="flex:1 1 340px;display:flex;flex-direction:column;gap:14px">
+              <div style="font-family:var(--head);font-weight:700;font-size:14px;opacity:.5">٠٢ — خدمة</div>
+              <h3 style="font-size:clamp(24px,3.2vw,50px);font-weight:700;line-height:1.16;max-width:22ch">إنتاج المحتوى الإبداعي</h3>
+            </div>
+            <div data-open="" style="display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:100px;border:1px solid rgba(10,21,32,.28);font-size:15px;font-weight:600;white-space:nowrap;transition:background .45s,color .45s,border-color .45s">افتح الملف <span data-arrow="" style="display:inline-block;transition:transform .5s cubic-bezier(.16,1,.3,1)">↖</span></div>
+          </div>
+          <div data-details="" style="overflow:hidden;max-height:0;opacity:0;transition:max-height .6s cubic-bezier(.16,1,.3,1),opacity .5s cubic-bezier(.16,1,.3,1),margin-top .6s cubic-bezier(.16,1,.3,1)">
+            <p style="font-size:clamp(14px,1.15vw,17px);line-height:1.75;opacity:.72;margin:0;max-width:52ch">نبتكر محتوى بصري وكتابي يلفت الانتباه، ويوصل رسالتك بشكل مؤثر وأصيل.</p>
+          </div>
+        </div>
+      </a>
+      <a href="Melaha Service.dc.html#branding" data-folder="" data-i="2" style="position:relative;display:block;text-decoration:none;color:#0A1520;z-index:4;transition:transform .6s cubic-bezier(.16,1,.3,1);will-change:transform">
+        <div data-tabrow="" style="position:relative;display:flex;justify-content:center;padding-inline:clamp(20px,7vw,150px)">
+          <div style="background:#C4D8E3;padding:clamp(12px,1.4vw,18px) clamp(30px,4vw,66px);font-size:clamp(14px,1.2vw,17px);font-weight:600;white-space:nowrap">علامة تجارية</div>
+        </div>
+        <div data-body="" style="position:relative;background:#C4D8E3;padding:clamp(26px,3.4vw,48px) clamp(20px,4vw,56px) clamp(30px,3.8vw,56px)">
+          <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:clamp(16px,2.4vw,40px)">
+            <div style="flex:1 1 340px;display:flex;flex-direction:column;gap:14px">
+              <div style="font-family:var(--head);font-weight:700;font-size:14px;opacity:.5">٠٣ — خدمة</div>
+              <h3 style="font-size:clamp(24px,3.2vw,50px);font-weight:700;line-height:1.16;max-width:22ch">بناء العلامة التجارية</h3>
+            </div>
+            <div data-open="" style="display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:100px;border:1px solid rgba(10,21,32,.28);font-size:15px;font-weight:600;white-space:nowrap;transition:background .45s,color .45s,border-color .45s">افتح الملف <span data-arrow="" style="display:inline-block;transition:transform .5s cubic-bezier(.16,1,.3,1)">↖</span></div>
+          </div>
+          <div data-details="" style="overflow:hidden;max-height:0;opacity:0;transition:max-height .6s cubic-bezier(.16,1,.3,1),opacity .5s cubic-bezier(.16,1,.3,1),margin-top .6s cubic-bezier(.16,1,.3,1)">
+            <p style="font-size:clamp(14px,1.15vw,17px);line-height:1.75;opacity:.72;margin:0;max-width:52ch">نبني إستراتيجية علامة لتكون أساس لأي قرار تسويقي، مع بناء الهوية البصرية بشكل يعكس قيم وشخصية العلامة.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  
+
+  <section id="work" data-screen-label="Work" style="padding:clamp(80px,11vw,160px) clamp(20px,4vw,56px)">
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:clamp(40px,6vw,72px)">
+      <div style="max-width:24ch">
+        <div data-reveal="" style="font-size:12px;color:#93B8CE;margin-bottom:20px">أعمالنا</div>
+        <h2 data-split="" style="font-size:clamp(28px,4.4vw,68px);font-weight:700;line-height:1.1;">قصص أبحرنا فيها مع شركائنا</h2>
+      </div>
+      <p data-reveal="" style="max-width:44ch;font-size:clamp(15px,1.2vw,18px);line-height:1.8;color:rgba(242,237,228,.66);margin:0">لمحة من حملاتنا وهوياتنا الأخيرة. كل مشروع رحلة بدأت من فكرة، ووصلت لأثر حقيقي.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(16px,2vw,26px)">
+      <a href="Melaha Project.dc.html#masnaf-eid" data-card="" data-reveal="" style="position:relative;display:flex;flex-direction:column;border:1px solid rgba(242,237,228,.14);border-radius:20px;overflow:hidden;background:rgba(242,237,228,.03);transition:transform .6s cubic-bezier(.16,1,.3,1),border-color .6s">
+        <div style="position:relative;aspect-ratio:16/10;overflow:hidden;background:#0C1E2C;flex:none">
+          <img data-img="" src="https://img.youtube.com/vi/q7gqmu6uD5k/maxresdefault.jpg" alt="فطور العيد في جازان" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1);will-change:transform">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,21,32,.72),rgba(10,21,32,0) 62%)"></div>
+          <div style="position:absolute;top:14px;right:14px;padding:7px 14px;border-radius:100px;background:rgba(10,21,32,.55);backdrop-filter:blur(8px);font-size:12px;color:rgba(242,237,228,.9)">علامة تجارية</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;flex:1;padding:clamp(20px,2.2vw,30px)">
+          <div style="font-size:13px;color:rgba(242,237,228,.55)">مصنف · ٢٠٢٥</div>
+          <h3 style="font-size:clamp(22px,2.3vw,34px);font-weight:700;line-height:1.2;">فطور العيد في جازان</h3>
+          <p style="font-size:15px;line-height:1.75;color:rgba(242,237,228,.62);margin:0">فيديو سردي يوثّق فطور العيد الجماعي في أحياء جازان.</p>
+          <div style="margin-top:auto;padding-top:16px;display:flex;align-items:center;gap:8px;font-size:14px;color:#93B8CE">شاهد المشروع ↗</div>
+        </div>
+      </a>
+      <a href="Melaha Project.dc.html#roban" data-card="" data-reveal="" style="position:relative;display:flex;flex-direction:column;border:1px solid rgba(242,237,228,.14);border-radius:20px;overflow:hidden;background:rgba(242,237,228,.03);transition:transform .6s cubic-bezier(.16,1,.3,1),border-color .6s">
+        <div style="position:relative;aspect-ratio:16/10;overflow:hidden;background:#0C1E2C;flex:none">
+          <img data-img="" src="https://melaha.co/images/roban-cover.png" alt="الربّان يفهمك" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1);will-change:transform">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,21,32,.72),rgba(10,21,32,0) 62%)"></div>
+          <div style="position:absolute;top:14px;right:14px;padding:7px 14px;border-radius:100px;background:rgba(10,21,32,.55);backdrop-filter:blur(8px);font-size:12px;color:rgba(242,237,228,.9)">حملة إعلانية</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;flex:1;padding:clamp(20px,2.2vw,30px)">
+          <div style="font-size:13px;color:rgba(242,237,228,.55)">الربّان · ٢٠٢٥</div>
+          <h3 style="font-size:clamp(22px,2.3vw,34px);font-weight:700;line-height:1.2;">الربّان يفهمك</h3>
+          <p style="font-size:15px;line-height:1.75;color:rgba(242,237,228,.62);margin:0">٦٧١٧٠٠ انطباع رقمي، وتجاوز المستهدف بـ٣٤٪.</p>
+          <div style="margin-top:auto;padding-top:16px;display:flex;align-items:center;gap:8px;font-size:14px;color:#93B8CE">شاهد المشروع ↗</div>
+        </div>
+      </a>
+      <a href="Melaha Project.dc.html#fournya" data-card="" data-reveal="" style="position:relative;display:flex;flex-direction:column;border:1px solid rgba(242,237,228,.14);border-radius:20px;overflow:hidden;background:rgba(242,237,228,.03);transition:transform .6s cubic-bezier(.16,1,.3,1),border-color .6s">
+        <div style="position:relative;aspect-ratio:16/10;overflow:hidden;background:#0C1E2C;flex:none">
+          <img data-img="" src="https://melaha.co/images/fournya-1.png" alt="بفطورك تزين أمورك" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1);will-change:transform">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,21,32,.72),rgba(10,21,32,0) 62%)"></div>
+          <div style="position:absolute;top:14px;right:14px;padding:7px 14px;border-radius:100px;background:rgba(10,21,32,.55);backdrop-filter:blur(8px);font-size:12px;color:rgba(242,237,228,.9)">حملة إعلانية</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;flex:1;padding:clamp(20px,2.2vw,30px)">
+          <div style="font-size:13px;color:rgba(242,237,228,.55)">فرنية · ٢٠٢٥</div>
+          <h3 style="font-size:clamp(22px,2.3vw,34px);font-weight:700;line-height:1.2;">بفطورك تزين أمورك</h3>
+          <p style="font-size:15px;line-height:1.75;color:rgba(242,237,228,.62);margin:0">بحث سوق أنتج منتج «وجبة الفطور» بـ١٩ ريال.</p>
+          <div style="margin-top:auto;padding-top:16px;display:flex;align-items:center;gap:8px;font-size:14px;color:#93B8CE">شاهد المشروع ↗</div>
+        </div>
+      </a>
+    </div>
+
+    <div data-reveal="" style="margin-top:clamp(30px,4vw,50px)">
+      <a href="Melaha Work.dc.html" data-magnet="" style="display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:100px;border:1px solid rgba(242,237,228,.28);font-size:15px;transition:background .4s" style-hover="background:rgba(242,237,228,.1)">استكشف جميع المشاريع ←</a>
+    </div>
+  </section>
+
+  <section id="about" data-screen-label="About" style="padding:clamp(80px,11vw,150px) clamp(20px,4vw,56px);border-top:1px solid rgba(242,237,228,.1)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(32px,5vw,80px);align-items:start">
+      <div>
+        <div data-reveal="" style="font-size:12px;color:#93B8CE;margin-bottom:20px">من نحن</div>
+        <h2 data-split="" style="font-size: clamp(24px,3.3vw,50px); font-weight: 700; line-height: 1.24; width: 522px; height: 96px"><span style="display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.12em; margin-bottom: -0.12em;"><span style="display: inline-block; transform: translateY(0px); transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0ms;">في</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.12em; margin-bottom: -0.12em;"><span style="display: inline-block; transform: translateY(0px); transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1) 65ms;">ملاحة</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.12em; margin-bottom: -0.12em;"><span style="display: inline-block; transform: translateY(0px); transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1) 130ms;">نحدد</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.12em; margin-bottom: -0.12em;"><span style="display: inline-block; transform: translateY(0px); transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1) 195ms;">وين</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.12em; margin-bottom: -0.12em;"><span style="display: inline-block; transform: translateY(0px); transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1) 260ms;">حاب</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.12em; margin-bottom: -0.12em;"><span style="display: inline-block; transform: translateY(0px); transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1) 325ms;">توصل وبعدها</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.12em; margin-bottom: -0.12em;"><span style="display: inline-block; transform: translateY(0px); transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1) 390ms;">نشتغل</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.12em; margin-bottom: -0.12em;"><span style="display: inline-block; transform: translateY(0px); transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1) 455ms;">على</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.12em; margin-bottom: -0.12em;"><span style="display: inline-block; transform: translateY(0px); transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1) 520ms;">افكار</span></span> <span style="display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.12em; margin-bottom: -0.12em;"><span style="display: inline-block; transform: translateY(0px); transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1) 585ms;">توصلك</span></span></h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <p data-reveal="" style="font-size:clamp(15px,1.25vw,19px);line-height:1.85;color:rgba(242,237,228,.74);margin:0">نُساعد العلامات التجارية على إيصال رسائلها بوضوح، من خلال حلول إبداعية تخدم أهدافها وتبني التصوّر الصحيح عنها في أذهان جمهورها.</p>
+        <p data-reveal="" style="font-size:clamp(15px,1.25vw,19px);line-height:1.85;color:rgba(242,237,228,.6);margin:0">نعمل مع الشركات والمشاريع التي تُدرك أهمية الرسالة، وتؤمن أن كل فكرة يجب أن تُصاغ بشكل يخدم الهدف.</p>
+        <div data-reveal="">
+          <a href="Melaha Contact.dc.html" data-magnet="" style="display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:100px;border:1px solid rgba(242,237,228,.28);font-size:15px;transition:background .4s,color .4s,border-color .4s" style-hover="background:#F2EDE4;color:#0A1520;border-color:#93B8CE">تواصل معنا ←</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" data-screen-label="Process" style="padding:clamp(80px,11vw,150px) clamp(20px,4vw,56px);background:linear-gradient(180deg,#0A1520,#0C1E2C 60%,#0A1520)">
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:clamp(40px,6vw,72px)">
+      <div style="max-width:20ch">
+        <div data-reveal="" style="font-size:12px;color:#93B8CE;margin-bottom:20px">آلية عملنا</div>
+        <h2 data-split="" style="font-size:clamp(28px,4.2vw,66px);font-weight:700;line-height:1.1;">كيف نعمل في ملاحة</h2>
+      </div>
+      <p data-reveal="" style="max-width:46ch;font-size:clamp(15px,1.2vw,18px);line-height:1.8;color:rgba(242,237,228,.66);margin:0">أربع مراحل واضحة، كل مرحلة تبني على اللي قبلها — من فهم وضعك لين تسليم شغل جاهز ومتابعة أثره.</p>
+    </div>
+
+    <div data-steps="" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;padding-inline:clamp(12px,2vw,26px)">
+      <div data-step="" data-i="0" style="position:relative;flex:1 1 0;min-width:0;width:clamp(215px,23vw,340px);background:#F2EDE4;color:#0A1520;border-radius:20px;padding:clamp(26px,2.8vw,40px) clamp(32px,3vw,44px) clamp(32px,3.6vw,54px);margin-top:0;margin-inline:-11px;transform:rotate(0deg);box-shadow:0 24px 60px rgba(4,10,16,.32);transition:transform .6s cubic-bezier(.16,1,.3,1),box-shadow .6s cubic-bezier(.16,1,.3,1);z-index:2;will-change:transform">
+        <div style="font-family:var(--head);font-weight:900;font-size:clamp(46px,5.4vw,86px);line-height:.85;margin-bottom:clamp(22px,2.6vw,40px)">١</div>
+        <h3 style="font-size:clamp(20px,2.1vw,31px);font-weight:700;line-height:1.2;margin-bottom:14px">نفهم</h3>
+        <p style="font-size:clamp(14px,1.1vw,16px);line-height:1.8;opacity:.72;margin:0;text-align:justify">نبدأ من وضعك الحالي: المشروع وين واقف، مين عميلـه، وش يواجـه، وايش النتيجة اللي ودّك توصلها.</p>
+      </div>
+      <div data-step="" data-i="1" style="position:relative;flex:1 1 0;min-width:0;width:clamp(215px,23vw,340px);background:#C4D8E3;color:#0A1520;border-radius:20px;padding:clamp(26px,2.8vw,40px) clamp(32px,3vw,44px) clamp(32px,3.6vw,54px);margin-top:clamp(28px,4vw,64px);margin-inline:-11px;transform:rotate(-0.6deg);box-shadow:0 24px 60px rgba(4,10,16,.32);transition:transform .6s cubic-bezier(.16,1,.3,1),box-shadow .6s cubic-bezier(.16,1,.3,1);z-index:3;will-change:transform">
+        <div style="font-family:var(--head);font-weight:900;font-size:clamp(46px,5.4vw,86px);line-height:.85;margin-bottom:clamp(22px,2.6vw,40px)">٢</div>
+        <h3 style="font-size:clamp(20px,2.1vw,31px);font-weight:700;line-height:1.2;margin-bottom:14px">نحدد التوجّه</h3>
+        <p style="font-size:clamp(14px,1.1vw,16px);line-height:1.8;opacity:.72;margin:0;text-align:justify">من الفهم نطلع بوجهة واضحة: ايش الرسالة، ولمين، وليش تفرق. نتفق عليها معك قبل أي شغل.</p>
+      </div>
+      <div data-step="" data-i="2" style="position:relative;flex:1 1 0;min-width:0;width:clamp(215px,23vw,340px);background:#A9CADB;color:#0A1520;border-radius:20px;padding:clamp(26px,2.8vw,40px) clamp(32px,3vw,44px) clamp(32px,3.6vw,54px);margin-top:0;margin-inline:-11px;transform:rotate(0.5deg);box-shadow:0 24px 60px rgba(4,10,16,.32);transition:transform .6s cubic-bezier(.16,1,.3,1),box-shadow .6s cubic-bezier(.16,1,.3,1);z-index:4;will-change:transform">
+        <div style="font-family:var(--head);font-weight:900;font-size:clamp(46px,5.4vw,86px);line-height:.85;margin-bottom:clamp(22px,2.6vw,40px)">٣</div>
+        <h3 style="font-size:clamp(20px,2.1vw,31px);font-weight:700;line-height:1.2;margin-bottom:14px">نبني الفكرة</h3>
+        <p style="font-size:clamp(14px,1.1vw,16px);line-height:1.8;opacity:.72;margin:0;text-align:justify">الأفكار تنبني على التوجّه، مو قبله. كل شي نطلع فيه له سبب واضح يرجع للهدف.</p>
+      </div>
+      <div data-step="" data-i="3" style="position:relative;flex:1 1 0;min-width:0;width:clamp(215px,23vw,340px);background:#93B8CE;color:#0A1520;border-radius:20px;padding:clamp(26px,2.8vw,40px) clamp(32px,3vw,44px) clamp(32px,3.6vw,54px);margin-top:clamp(28px,4vw,64px);margin-inline:-11px;transform:rotate(-0.4deg);box-shadow:0 24px 60px rgba(4,10,16,.32);transition:transform .6s cubic-bezier(.16,1,.3,1),box-shadow .6s cubic-bezier(.16,1,.3,1);z-index:5;will-change:transform">
+        <div style="font-family:var(--head);font-weight:900;font-size:clamp(46px,5.4vw,86px);line-height:.85;margin-bottom:clamp(22px,2.6vw,40px)">٤</div>
+        <h3 style="font-size:clamp(20px,2.1vw,31px);font-weight:700;line-height:1.2;margin-bottom:14px">ننفذ ونتابع</h3>
+        <p style="font-size:clamp(14px,1.1vw,16px);line-height:1.8;opacity:.72;margin:0;text-align:justify">نحوّل الأفكار لشغل جاهز: إنتاج وتصميم ومحتوى، ونسلّمه جاهز للنشر — ونتابع الأثر.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="CTA" style="position:relative;padding:clamp(90px,13vw,190px) clamp(20px,4vw,56px);overflow:hidden;border-top:1px solid rgba(242,237,228,.1)">
+    <div style="position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:clamp(20px,3vw,32px)">
+      <div data-reveal="" style="font-size:12px;color:#93B8CE">جاهز للإبحار؟</div>
+      <h2 data-split="" style="font-size:clamp(32px,6.4vw,110px);font-weight:900;line-height:1.04;max-width:17ch">معنا توصل رسائلك وتحقق هدفك.</h2>
+      <p data-reveal="" style="max-width:48ch;font-size:clamp(15px,1.2vw,19px);line-height:1.8;color:rgba(242,237,228,.7);margin:0">فريق ملاحة جاهز يبحر بأعمالك لآفاق تحقق أهدافك بكل احترافية.</p>
+      <div data-reveal="">
+        <a href="Melaha Contact.dc.html" data-magnet="" style="display:inline-flex;align-items:center;gap:12px;padding:18px 36px;border-radius:100px;background:#F2EDE4;color:#0A1520;font-weight:600;font-size:16px;transition:transform .4s cubic-bezier(.16,1,.3,1),background .4s" style-hover="background:#93B8CE;transform:translateY(-3px)">أبحر معنا <span>←</span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer data-screen-label="Footer" style="padding:clamp(56px,7vw,96px) clamp(20px,4vw,56px) 30px;border-top:1px solid rgba(242,237,228,.12)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:clamp(32px,4vw,64px);align-items:start;margin-bottom:clamp(44px,6vw,76px)">
+      <div style="display:flex;flex-direction:column;gap:18px;align-items:flex-start">
+        <img src="https://melaha.co/images/melaha-logo.svg" alt="ملاحة" style="height:34px;width:auto;filter:brightness(0) invert(1)">
+        <p style="font-size:14px;line-height:1.85;color:rgba(242,237,228,.55);max-width:26ch;margin:0">الشريك الإبداعي للعلامات الطموحة.</p>
+        <a href="Melaha Contact.dc.html" data-magnet="" style-hover="background:#F2EDE4;color:#0A1520;border-color:#F2EDE4" style="margin-top:6px;display:inline-flex;align-items:center;gap:9px;padding:12px 24px;border-radius:100px;border:1px solid rgba(242,237,228,.25);font-size:14px;font-weight:600;transition:background .4s,color .4s,border-color .4s">أبحر معنا <span>←</span></a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+        <h4 style="font-size:12px;font-weight:700;color:rgba(242,237,228,.42);margin-bottom:6px">استكشف</h4>
+        <a href="#top" data-flink="" style="display:inline-flex;align-items:center;gap:10px;font-size:15px;color:rgba(242,237,228,.72);transition:color .35s,transform .35s cubic-bezier(.16,1,.3,1)">الرئيسية</a>
+        <a href="#services" data-flink="" style="display:inline-flex;align-items:center;gap:10px;font-size:15px;color:rgba(242,237,228,.72);transition:color .35s,transform .35s cubic-bezier(.16,1,.3,1)">خدماتنا</a>
+        <a href="#process" data-flink="" style="display:inline-flex;align-items:center;gap:10px;font-size:15px;color:rgba(242,237,228,.72);transition:color .35s,transform .35s cubic-bezier(.16,1,.3,1)">آلية عملنا</a>
+        <a href="Melaha Work.dc.html" data-flink="" style="display:inline-flex;align-items:center;gap:10px;font-size:15px;color:rgba(242,237,228,.72);transition:color .35s,transform .35s cubic-bezier(.16,1,.3,1)">أعمالنا</a>
+        <a href="#about" data-flink="" style="display:inline-flex;align-items:center;gap:10px;font-size:15px;color:rgba(242,237,228,.72);transition:color .35s,transform .35s cubic-bezier(.16,1,.3,1)">من نحن</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+        <h4 style="font-size:12px;font-weight:700;color:rgba(242,237,228,.42);margin-bottom:6px">تواصل</h4>
+        <a href="mailto:info@melaha.co" data-flink="" style="display:inline-flex;align-items:center;gap:10px;font-size:15px;color:rgba(242,237,228,.72);transition:color .35s,transform .35s cubic-bezier(.16,1,.3,1)">info@melaha.co</a>
+        <a href="tel:+966538811710" data-flink="" dir="ltr" style="font-size:15px;color:rgba(242,237,228,.72);transition:color .35s">053 881 1710</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+        <h4 style="font-size:12px;font-weight:700;color:rgba(242,237,228,.42);margin-bottom:6px">تابعنا</h4>
+        <a href="https://x.com/melaha_sa" target="_blank" rel="noopener" aria-label="X" data-social="" style="display:inline-flex;align-items:center;gap:12px;font-size:15px;color:rgba(242,237,228,.72);transition:color .35s"><span style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;flex:none;border-radius:50%;border:1px solid rgba(242,237,228,.22);transition:border-color .35s,background .35s"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.2l-7 8 7.3 9.9h-5.6l-4.4-5.9-5 5.9H2.8l7.3-8.5L3.1 3h5.7l4.1 5.5L17.5 3Zm-1.1 15.9h1.8L7.6 4.9H5.7l10.7 14Z"></path></svg></span>X</a>
+        <a href="https://www.instagram.com/melaha.sa/" target="_blank" rel="noopener" aria-label="Instagram" data-social="" style="display:inline-flex;align-items:center;gap:12px;font-size:15px;color:rgba(242,237,228,.72);transition:color .35s"><span style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;flex:none;border-radius:50%;border:1px solid rgba(242,237,228,.22);transition:border-color .35s,background .35s"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2.2c-2.7 0-3 0-4 .06-1.1.05-1.8.2-2.5.5a4.9 4.9 0 0 0-1.8 1.2 4.9 4.9 0 0 0-1.2 1.8c-.3.6-.45 1.4-.5 2.5C2 9.3 2 9.6 2 12s0 2.7.06 3.7c.05 1.1.2 1.8.5 2.5a4.9 4.9 0 0 0 1.2 1.8 4.9 4.9 0 0 0 1.8 1.2c.6.3 1.4.45 2.5.5 1 .06 1.3.06 4 .06s2.7 0 3.7-.06c1.1-.05 1.8-.2 2.5-.5a5 5 0 0 0 2.9-2.9c.3-.6.45-1.4.5-2.5.06-1 .06-1.3.06-3.7s0-2.7-.06-3.7c-.05-1.1-.2-1.8-.5-2.5a4.9 4.9 0 0 0-1.2-1.8 4.9 4.9 0 0 0-1.8-1.2c-.6-.3-1.4-.45-2.5-.5C14.7 2.2 14.4 2.2 12 2.2Zm0 1.8c2.7 0 3 0 4 .05.9.04 1.4.2 1.7.32.4.17.7.37 1 .68.3.3.5.6.68 1 .13.34.28.83.32 1.72.05 1 .05 1.3.05 3.6s0 2.6-.05 3.6c-.04.9-.2 1.4-.32 1.72-.17.4-.37.7-.68 1-.3.3-.6.5-1 .68-.34.13-.83.28-1.72.32-1 .05-1.3.05-3.6.05s-2.6 0-3.6-.05c-.9-.04-1.4-.2-1.72-.32-.4-.17-.7-.37-1-.68-.3-.3-.5-.6-.68-1-.13-.34-.28-.83-.32-1.72-.05-1-.05-1.3-.05-3.6s0-2.6.05-3.6c.04-.9.2-1.4.32-1.72.17-.4.37-.7.68-1 .3-.3.6-.5 1-.68.34-.13.83-.28 1.72-.32 1-.05 1.3-.05 3.6-.05Zm0 3.06a4.94 4.94 0 1 0 0 9.88 4.94 4.94 0 0 0 0-9.88Zm0 8.14a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4Zm6.3-8.34a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0Z"></path></svg></span>Instagram</a>
+        <a href="https://www.tiktok.com/@melaha.sa" target="_blank" rel="noopener" aria-label="TikTok" data-social="" style="display:inline-flex;align-items:center;gap:12px;font-size:15px;color:rgba(242,237,228,.72);transition:color .35s"><span style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;flex:none;border-radius:50%;border:1px solid rgba(242,237,228,.22);transition:border-color .35s,background .35s"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M16.6 2h-3v13.1a2.6 2.6 0 1 1-2.6-2.6c.27 0 .53.04.78.12V9.5a5.7 5.7 0 0 0-.78-.05 5.7 5.7 0 1 0 5.7 5.7V8.4c1 .8 2.3 1.3 3.7 1.35V6.6a3.9 3.9 0 0 1-3.8-3.8V2Z"></path></svg></span>TikTok</a>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:26px;border-top:1px solid rgba(242,237,228,.1);font-size:13px;color:rgba(242,237,228,.42)">
+      <span>© 2026 — وكالة ملاحة. جميع الحقوق محفوظة.</span>
+      <span>الرياض، المملكة العربية السعودية</span>
+    </div>
+  </footer>
+</div>
+
+<div style="font-size: 16px; line-height: 1; font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; position: absolute; left: 18px; top: -1px">Your text here</div></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const EASE = 'cubic-bezier(.16,1,.3,1)';
+    const AR = ['٠','١','٢','٣','٤','٥','٦','٧','٨','٩'];
+    const ar = n => String(n).split('').map(d => AR[+d]).join('');
+
+    // preloader
+    const pre = document.querySelector('[data-preloader]');
+    const cnt = document.querySelector('[data-count]');
+    if (pre) {
+      const t0 = Date.now(), dur = 1250;
+      const iv = setInterval(() => {
+        const p = Math.min(1, (Date.now() - t0) / dur);
+        if (cnt) cnt.textContent = ar(Math.round(p * 100));
+        if (p >= 1) clearInterval(iv);
+      }, 40);
+      setTimeout(() => { pre.style.transform = 'translateY(-101%)'; }, 1300);
+      setTimeout(() => { pre.style.display = 'none'; }, 2450);
+    }
+
+    // split headings into word masks
+    document.querySelectorAll('[data-split]').forEach(h => {
+      const words = (h.textContent || '').trim().split(/\s+/);
+      h.textContent = '';
+      words.forEach((w, i) => {
+        const mask = document.createElement('span');
+        mask.style.cssText = 'display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-bottom:-.12em';
+        const inner = document.createElement('span');
+        inner.textContent = w;
+        inner.style.cssText = 'display:inline-block;transform:translateY(108%);transition:transform 1s ' + EASE + ' ' + (i * 65) + 'ms';
+        mask.appendChild(inner);
+        h.appendChild(mask);
+        if (i < words.length - 1) h.appendChild(document.createTextNode(' '));
+      });
+      h.dataset.ready = '1';
+    });
+
+    // fade-up items
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(26px)';
+      el.style.transition = 'opacity .9s ' + EASE + ',transform .9s ' + EASE;
+    });
+
+    const show = el => {
+      if (el.dataset.shown) return;
+      el.dataset.shown = '1';
+      if (el.hasAttribute('data-split')) {
+        el.querySelectorAll('span > span').forEach(s => { s.style.transform = 'translateY(0)'; });
+      } else {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      }
+      if (el.hasAttribute('data-step')) {
+        const bar = el.querySelector('[data-bar]');
+        if (bar) setTimeout(() => { bar.style.width = '100%'; }, 220);
+      }
+    };
+
+    const io = new IntersectionObserver(es => {
+      es.forEach(e => { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('[data-split],[data-reveal]').forEach(el => io.observe(el));
+    setTimeout(() => document.querySelectorAll('[data-split],[data-reveal]').forEach(show), 4200);
+
+    // service folders: stagger in, lift on hover
+    const folders = Array.from(document.querySelectorAll('[data-folder]'));
+    // stack them touching: each folder's tab overlaps the body above it
+    const stack = () => {
+      folders.forEach((fo, i) => {
+        const nxt = folders[i + 1];
+        const body = fo.querySelector('[data-body]');
+        if (body) {
+          const nt = nxt ? nxt.querySelector('[data-tabrow]') : null;
+          const base = 'calc(clamp(30px,3.8vw,56px) + ' + (nt ? nt.offsetHeight : 0) + 'px)';
+          body.dataset.basePad = base;
+          if (!fo.matches(':hover')) body.style.paddingBottom = base;
+        }
+      });
+    };
+    this._stack = stack;
+    stack();
+    window.addEventListener('resize', stack);
+    setTimeout(stack, 400);
+    folders.forEach((fo, i) => {
+      fo.style.opacity = '0';
+      fo.style.transform = 'translateY(34px)';
+      fo.style.transition = 'opacity .8s ' + EASE + ' ' + (i * 130) + 'ms,transform .85s ' + EASE + ' ' + (i * 130) + 'ms';
+      fo.style.marginTop = i === 0 ? '0px' : 'calc(-1 * (clamp(12px,1.4vw,18px) * 2 + 1.35em))';
+      const btn = fo.querySelector('[data-open]');
+      const arw = fo.querySelector('[data-arrow]');
+      const det = fo.querySelector('[data-details]');
+      const bd = fo.querySelector('[data-body]');
+      const LIFT = 16;
+      if (bd) bd.style.transition = 'padding-bottom .55s ' + EASE;
+      fo.addEventListener('mouseenter', () => {
+        fo.style.transition = 'transform .55s ' + EASE;
+        fo.style.transform = 'translateY(-' + LIFT + 'px)';
+        fo.style.zIndex = '20';
+        // grow the sheet downward by the same amount so its bottom edge stays put — no page bg shows through
+        if (bd) {
+          bd.style.paddingBottom = 'calc(' + (bd.dataset.basePad || '0px') + ' + ' + LIFT + 'px)';
+          bd.style.marginBottom = '-' + LIFT + 'px';
+        }
+        if (det) {
+          det.style.maxHeight = det.scrollHeight + 'px';
+          det.style.opacity = '1';
+          det.style.marginTop = '18px';
+        }
+        if (btn) { btn.style.background = '#0A1520'; btn.style.color = '#F2EDE4'; btn.style.borderColor = '#0A1520'; }
+        if (arw) arw.style.transform = 'rotate(-45deg) scale(1.15)';
+      });
+      fo.addEventListener('mouseleave', () => {
+        fo.style.transform = 'translateY(0)';
+        fo.style.zIndex = String(i + 2);
+        if (bd) { bd.style.paddingBottom = bd.dataset.basePad || ''; bd.style.marginBottom = '0px'; }
+        if (det) { det.style.maxHeight = '0px'; det.style.opacity = '0'; det.style.marginTop = '0px'; }
+        if (btn) { btn.style.background = 'transparent'; btn.style.color = ''; btn.style.borderColor = 'rgba(10,21,32,.28)'; }
+        if (arw) arw.style.transform = 'none';
+      });
+    });
+    const fio = new IntersectionObserver(es => {
+      es.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+          fio.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+    folders.forEach(fo => fio.observe(fo));
+    setTimeout(() => folders.forEach(fo => { fo.style.opacity = '1'; fo.style.transform = 'translateY(0)'; }), 4000);
+
+    // work cards
+    document.querySelectorAll('[data-card]').forEach(card => {
+      const im = card.querySelector('[data-img]');
+      card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-8px)';
+        card.style.borderColor = 'rgba(147,184,206,.55)';
+        if (im) im.style.transform = 'scale(1.07)';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'none';
+        card.style.borderColor = 'rgba(242,237,228,.14)';
+        if (im) im.style.transform = 'none';
+      });
+    });
+
+    // process cards: fan in, lift to front on hover
+    const steps = Array.from(document.querySelectorAll('[data-step]'));
+    // narrow screens: 2x2 fan (each row a pair that still overlaps) instead of a 3+1 orphan
+    const fan = () => {
+      const row = document.querySelector('[data-steps]');
+      if (!row) return;
+      const pair = row.clientWidth < 1040;
+      row.style.maxWidth = pair ? '760px' : '';
+      row.style.marginInline = pair ? 'auto' : '';
+      steps.forEach((s, i) => {
+        s.style.flexBasis = pair ? 'calc(50% - 6px)' : '0';
+        s.style.width = pair ? 'auto' : 'clamp(215px,23vw,340px)';
+        s.style.marginTop = (pair ? (i > 1) : (i % 2 === 1)) ? 'clamp(24px,3.4vw,64px)' : '0px';
+      });
+    };
+    this._fan = fan;
+    fan();
+    window.addEventListener('resize', fan);
+    steps.forEach((s, i) => {
+      const rest = s.style.transform;
+      s.style.opacity = '0';
+      s.style.transform = rest + ' translateY(40px)';
+      s.style.transition = 'opacity .8s ' + EASE + ' ' + (i * 120) + 'ms,transform .9s ' + EASE + ' ' + (i * 120) + 'ms,box-shadow .6s ' + EASE;
+      s.dataset.rest = rest;
+      s.addEventListener('mouseenter', () => {
+        s.style.transition = 'transform .5s ' + EASE + ',box-shadow .5s ' + EASE;
+        s.style.transform = 'rotate(0deg) translateY(-16px) scale(1.03)';
+        s.style.boxShadow = '0 36px 80px rgba(4,10,16,.45)';
+        s.style.zIndex = '30';
+      });
+      s.addEventListener('mouseleave', () => {
+        s.style.transform = s.dataset.rest;
+        s.style.boxShadow = '0 24px 60px rgba(4,10,16,.32)';
+        s.style.zIndex = String(i + 2);
+      });
+    });
+    const sio = new IntersectionObserver(es => {
+      es.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = e.target.dataset.rest;
+          sio.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    steps.forEach(s => sio.observe(s));
+    setTimeout(() => steps.forEach(s => { s.style.opacity = '1'; s.style.transform = s.dataset.rest; }), 4200);
+
+    // footer links + social icons
+    document.querySelectorAll('[data-flink]').forEach(a => {
+      a.addEventListener('mouseenter', () => { a.style.color = '#93B8CE'; a.style.transform = 'translateX(-4px)'; });
+      a.addEventListener('mouseleave', () => { a.style.color = 'rgba(242,237,228,.72)'; a.style.transform = 'none'; });
+    });
+    document.querySelectorAll('[data-social]').forEach(a => {
+      const ring = a.firstElementChild;
+      a.addEventListener('mouseenter', () => {
+        a.style.color = '#93B8CE';
+        if (ring) { ring.style.borderColor = '#93B8CE'; ring.style.background = 'rgba(147,184,206,.12)'; }
+      });
+      a.addEventListener('mouseleave', () => {
+        a.style.color = 'rgba(242,237,228,.72)';
+        if (ring) { ring.style.borderColor = 'rgba(242,237,228,.22)'; ring.style.background = 'transparent'; }
+      });
+    });
+
+    // cursor follower + magnetic buttons
+    const cur = document.querySelector('[data-cursor]');
+    let cx = 0, cy = 0, tx = 0, ty = 0;
+    this._move = e => {
+      tx = e.clientX; ty = e.clientY;
+      if (cur) cur.style.opacity = '1';
+    };
+    window.addEventListener('mousemove', this._move, { passive: true });
+    document.querySelectorAll('[data-magnet],[data-row],[data-card]').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        if (!cur) return;
+        cur.style.width = '48px'; cur.style.height = '48px';
+        cur.style.background = 'rgba(147,184,206,.18)';
+      });
+      el.addEventListener('mouseleave', () => {
+        if (!cur) return;
+        cur.style.width = '12px'; cur.style.height = '12px';
+        cur.style.background = 'rgba(147,184,206,.35)';
+      });
+    });
+
+    // scroll: progress, parallax, nav
+    const nav = document.querySelector('[data-nav]');
+    const bar = document.querySelector('[data-progress]');
+    const px = Array.from(document.querySelectorAll('[data-parallax]'));
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      if (bar) bar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      px.forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (r.bottom > -200 && r.top < window.innerHeight + 200) {
+          const rel = (r.top + r.height / 2 - window.innerHeight / 2);
+          el.style.transform = 'translate3d(0,' + (rel * parseFloat(el.dataset.parallax)).toFixed(2) + 'px,0)';
+        }
+      });
+      if (nav) {
+        const down = y > lastY + 4 && y > 220;
+        const up = y < lastY - 4;
+        if (down) nav.style.transform = 'translateY(-110%)';
+        if (up) nav.style.transform = 'translateY(0)';
+        if (y > 80) {
+          nav.style.background = 'rgba(10,21,32,.72)';
+          nav.style.backdropFilter = 'blur(14px)';
+          nav.style.padding = '14px clamp(20px,4vw,56px)';
+        } else {
+          nav.style.background = 'transparent';
+          nav.style.backdropFilter = 'none';
+          nav.style.padding = '22px clamp(20px,4vw,56px)';
+        }
+        if (Math.abs(y - lastY) > 4) lastY = y;
+      }
+    };
+    this._onScroll = onScroll;
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    onScroll();
+
+    this._cursorIv = setInterval(() => {
+      cx += (tx - cx) * 0.2; cy += (ty - cy) * 0.2;
+      if (cur) cur.style.transform = 'translate(' + cx.toFixed(1) + 'px,' + cy.toFixed(1) + 'px) translate(-50%,-50%)';
+    }, 16);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this._cursorIv);
+    window.removeEventListener('scroll', this._onScroll);
+    window.removeEventListener('resize', this._onScroll);
+    window.removeEventListener('resize', this._stack);
+    window.removeEventListener('resize', this._fan);
+    window.removeEventListener('mousemove', this._move);
+  }
+
+  renderVals() { return {}; }
+}
+
+</script>
+</body>
+</html>
