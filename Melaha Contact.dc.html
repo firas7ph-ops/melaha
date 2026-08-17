@@ -222,7 +222,7 @@ class Component extends DCLogic {
         };
         if (btn) { btn.disabled = true; btn.style.opacity = '.65'; btn.style.cursor = 'default'; }
         if (status) { status.style.color = '#93B8CE'; status.textContent = 'جاري إرسال طلبك…'; }
-        const ENDPOINT = 'https://script.google.com/macros/s/AKfycbwJUA7hw5Tt5b-C-hlsyT9HLVm-MAXoanUsCKku81AN5-q6LYeWjfttxk4h63dyhIv8WA/exec';
+        const ENDPOINT = 'https://script.google.com/macros/s/AKfycbyvbxQVJXsWcFoVIhwG2eJTx7YdKU809SkSZWG7VYAD-ZA3SKD8Rj0qNsdicQWzyOtIfA/exec';
         // plain JSON body — the shape the script accepted before
         fetch(ENDPOINT, {
           method: 'POST',
